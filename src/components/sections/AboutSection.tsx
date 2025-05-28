@@ -9,7 +9,8 @@ export default function AboutSection() {
   return (
     <React.Fragment>
       <div
-        className="h-full bg-[#2D2D2D] w-full flex items-center justify-center text-center overflow-hidden absolute top-[100vh] left-0 z-[-1]"
+        className="min-h-fit bg-[#2D2D2D] w-full flex items-center justify-center text-center overflow-hidden relative"
+        style={{ height: `calc(95 * var(--vh))` }}
         id="about"
       >
         <div className="w-4/5 text-center space-y-12">

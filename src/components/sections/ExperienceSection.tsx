@@ -6,14 +6,15 @@ import { useWindowSize } from "../../hooks/useWindowSize.tsx";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation.tsx";
 
 export default function ExperienceSection() {
-  const { isMobile } = useWindowSize();
+  const { isTablet, isMobile } = useWindowSize();
   const experienceAnimation = useScrollAnimation();
   const [activeExperience, setActiveExperience] = useState(1);
 
   return (
     <React.Fragment>
       <div
-        className="h-screen bg-[#2D2D2D] w-full flex items-center justify-center text-center overflow-hidden absolute top-[450vh] left-0 z-[-1]"
+        className="min-h-fit bg-[#2D2D2D] w-full flex items-center justify-center text-center overflow-hidden relative"
+        style={{ height: `calc(100 * var(--vh))` }}
         id="experiences"
       >
         <div className={`w-4/5 text-center space-y-16`}>
@@ -28,10 +29,10 @@ export default function ExperienceSection() {
             </Label>
           </div>
           <div
-            className={`w-full h-fit flex ${
-              isMobile ? "flex-col" : ""
+            className={`w-full flex ${
+              isTablet || isMobile ? "flex-col" : ""
             } items-center justify-center ${
-              isMobile ? "space-y-8" : "space-x-8"
+              isTablet || isMobile ? "space-y-8" : "space-x-8"
             }`}
           >
             <ExperienceNav

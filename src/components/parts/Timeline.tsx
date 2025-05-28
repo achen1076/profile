@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "../../constants/globalFunctions.tsx";
 import Label from "../atoms/label.tsx";
 import ProjectCards from "../organisms/ProjectCards.tsx";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation.tsx";
+import { useWindowSize } from "../../hooks/useWindowSize.tsx";
 
 interface TimelineProps {
   className?: string;
 }
 
 const Timeline: React.FC<TimelineProps> = ({ className }) => {
-  const globalStyle = "w-full text-center";
+  const globalStyle = "w-full text-center space-y-8";
 
   const projectOneAnimation = useScrollAnimation();
   const projectTwoAnimation = useScrollAnimation();
@@ -17,18 +18,28 @@ const Timeline: React.FC<TimelineProps> = ({ className }) => {
   const projectFourAnimation = useScrollAnimation();
   const projectFiveAnimation = useScrollAnimation();
 
+  const { width } = useWindowSize();
+  const [aboveWidthThreshold, setAboveWidthThreshold] = useState(true);
+
+  useEffect(() => {
+    setAboveWidthThreshold(width > 1024);
+    const handleResize = () => setAboveWidthThreshold(width > 1024);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [width]);
+
   const projectInfo = [
     {
       name: "Project 1",
       description:
         "This is the detailed description for Project 1. It includes responsibilities, technologies used, and achievements.",
-      link: "",
+      link: "a",
     },
     {
       name: "Project 2",
       description:
         "This is the detailed description for Project 2. It showcases different projects and skills developed during this period.",
-      link: "",
+      link: "a",
     },
     {
       name: "Project 3",
@@ -57,7 +68,7 @@ const Timeline: React.FC<TimelineProps> = ({ className }) => {
       </Label>
       <div>
         <ProjectCards
-          variant="left"
+          variant={aboveWidthThreshold ? "left" : "center"}
           color="bg-red-500"
           ref={projectOneAnimation.ref}
           className={`${
@@ -68,7 +79,7 @@ const Timeline: React.FC<TimelineProps> = ({ className }) => {
           ProjectLink={projectInfo[0].link}
         />
         <ProjectCards
-          variant="right"
+          variant={aboveWidthThreshold ? "right" : "center"}
           color="bg-blue-500"
           ref={projectTwoAnimation.ref}
           className={`${
@@ -79,7 +90,7 @@ const Timeline: React.FC<TimelineProps> = ({ className }) => {
           ProjectLink={projectInfo[1].link}
         />
         <ProjectCards
-          variant="left"
+          variant={aboveWidthThreshold ? "left" : "center"}
           color="bg-green-500"
           ref={projectThreeAnimation.ref}
           className={`${
@@ -90,7 +101,7 @@ const Timeline: React.FC<TimelineProps> = ({ className }) => {
           ProjectLink={projectInfo[2].link}
         />
         <ProjectCards
-          variant="right"
+          variant={aboveWidthThreshold ? "right" : "center"}
           color="bg-yellow-500"
           ref={projectFourAnimation.ref}
           className={`${
@@ -101,7 +112,7 @@ const Timeline: React.FC<TimelineProps> = ({ className }) => {
           ProjectLink={projectInfo[3].link}
         />
         <ProjectCards
-          variant="left"
+          variant= {aboveWidthThreshold ? "left" : "center"}
           color="bg-purple-500"
           ref={projectFiveAnimation.ref}
           className={`${

@@ -12,7 +12,7 @@ export default function ExperienceLink({
   const { isMobile } = useWindowSize();
 
   return (
-    <div className="flex items-center cursor-pointer justify-center pt-2 pb-2 pl-6 pr-6 space-x-4 bg-red-500">
+    <div className="w-full h-fit flex items-center cursor-pointer justify-center pt-2 pb-2 pl-6 pr-6 space-x-4 bg-red-500 rounded-md">
       <div className="w-10 h-10 bg-pink-500"></div>
       <Label
         size={`${isMobile ? "xl" : "2xl"}`}

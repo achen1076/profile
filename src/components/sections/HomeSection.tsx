@@ -1,12 +1,12 @@
 import React from "react";
 import Label from "../atoms/label.tsx";
-import Button from "../atoms/button.tsx";
 
 export default function HomeSection() {
   return (
     <React.Fragment>
       <div
-        className="h-full bg-[#2D2D2D] w-full flex items-center justify-center text-center overflow-hidden absolute top-0 left-0 z-[-1]"
+        className="min-h-fit bg-[#2D2D2D] w-full flex items-center justify-center text-center overflow-hidden relative"
+        style={{ height: `calc(100 * var(--vh))` }}
         id="home"
       >
         <div className="w-[40%] text-left ml-[10%]">

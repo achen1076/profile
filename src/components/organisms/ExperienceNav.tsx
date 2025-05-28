@@ -13,16 +13,14 @@ export default function ExperienceNav({
   activeExperience,
   setActiveExperience,
 }: ExperienceNavProps) {
-  const { isMobile } = useWindowSize();
+  const { isTablet, isMobile } = useWindowSize();
 
   const experienceAnimation = useScrollAnimation();
 
   return (
     <div
       ref={experienceAnimation.ref}
-      className={`flex items-center justify-center w-1/4 h-full ${
-        isMobile ? "space-x-4" : "space-y-12"
-      } min-w-fit ${isMobile ? "flex-row" : "flex-col"} ${
+      className={`flex items-center justify-center ${isTablet || isMobile ? "w-full" : "w-1/4"} h-full space-y-12 min-w-fit flex-col ${
         experienceAnimation.isVisible ? "animate-fadeRight" : "opacity-0"
       } `}
     >
@@ -42,6 +40,7 @@ export default function ExperienceNav({
         setActiveExperience={setActiveExperience}
         experienceId={4}
       />
+      
     </div>
   );
 }

@@ -10,7 +10,7 @@ interface ExperienceCardProps {
 export default function ExperienceCard({
   activeExperience,
 }: ExperienceCardProps) {
-  const { isMobile } = useWindowSize();
+  const { isMobile, isTablet } = useWindowSize();
   const [animating, setAnimating] = useState(false);
   const [displayedExperience, setDisplayedExperience] =
     useState(activeExperience);
@@ -67,8 +67,8 @@ export default function ExperienceCard({
     <div
       ref={experienceAnimation.ref}
       className={`${
-        isMobile ? "w-full" : "w-2/3"
-      } h-full rounded-3xl pt-4 pb-4 pl-8 pr-8 space-y-8 transition-all duration-300 bg-purple-500 ${
+        (isTablet || isMobile) ? "w-full" : "w-2/3"
+      } h-fit rounded-3xl pt-4 pb-4 pl-8 pr-8 space-y-8 transition-all duration-300 bg-purple-500 ${
         experienceAnimation.isVisible ? "animate-fadeLeft" : "opacity-0"
       }`}
     >
@@ -77,7 +77,7 @@ export default function ExperienceCard({
           {currentExperience.title}
         </Label>
       </div>
-      <div className={` min-h-[30vh]`}>
+      <div className={` min-h-[300px]`}>
         <Label size="lg" className={`transform ${textAnimation}`}>
           {currentExperience.content}
         </Label>

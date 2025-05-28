@@ -1,9 +1,11 @@
 import React from "react";
 import Label from "../atoms/label.tsx";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation.tsx";
+import { useWindowSize } from "../../hooks/useWindowSize.tsx";
 
 export default function SkillsCard() {
   const skillAnimation = useScrollAnimation();
+  const { isTablet } = useWindowSize();
   const skillsData = {
     programming: [
       "React",
@@ -51,7 +53,7 @@ export default function SkillsCard() {
 
   return (
     <div
-      className="grid grid-cols-1 md:grid-cols-3 gap-6 transform transition-all duration-700"
+      className={`grid grid-cols-1 ${isTablet ? "md:grid-cols-1" : "md:grid-cols-3"} gap-4 md:gap-6 transform transition-all duration-700 w-full max-w-full px-2 md:px-0`}
       ref={skillAnimation.ref}
     >
       <div
@@ -64,13 +66,14 @@ export default function SkillsCard() {
             Programming
           </Label>
         </div>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           {skillsData.programming.map((skill, index) => (
             <div
               key={index}
-              className="bg-gray-600 rounded p-2 text-center text-white hover:bg-blue-400 transition-colors duration-300 cursor-default"
+              className="bg-gray-600 rounded p-2 text-center text-white hover:bg-blue-400 transition-colors duration-300 cursor-default overflow-hidden"
+              title={skill} // Add tooltip for overflow text
             >
-              {skill}
+              <span className="block truncate text-sm">{skill}</span>
             </div>
           ))}
         </div>
@@ -86,13 +89,14 @@ export default function SkillsCard() {
             Technology
           </Label>
         </div>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           {skillsData.technology.map((skill, index) => (
             <div
               key={index}
-              className="bg-gray-600 rounded p-2 text-center text-white hover:bg-green-400 transition-colors duration-300 cursor-default"
+              className="bg-gray-600 rounded p-2 text-center text-white hover:bg-green-400 transition-colors duration-300 cursor-default overflow-hidden"
+              title={skill} // Add tooltip for overflow text
             >
-              {skill}
+              <span className="block truncate text-sm">{skill}</span>
             </div>
           ))}
         </div>
@@ -108,13 +112,14 @@ export default function SkillsCard() {
             Libraries
           </Label>
         </div>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           {skillsData.libraries.map((skill, index) => (
             <div
               key={index}
-              className="bg-gray-600 rounded p-2 text-center text-white hover:bg-purple-400 transition-colors duration-300 cursor-default"
+              className="bg-gray-600 rounded p-2 text-center text-white hover:bg-purple-400 transition-colors duration-300 cursor-default overflow-hidden"
+              title={skill}
             >
-              {skill}
+              <span className="block truncate text-sm">{skill}</span>
             </div>
           ))}
         </div>

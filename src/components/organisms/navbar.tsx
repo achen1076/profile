@@ -75,6 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({
               <NavLink to="#projects">Projects</NavLink>
               <NavLink to="#experiences">Experiences</NavLink>
               <NavLink to="#skills">Skills</NavLink>
+              <NavLink to="#contact">Contact</NavLink>
             </div>
           )}
         </div>
@@ -86,6 +87,7 @@ const Navbar: React.FC<NavbarProps> = ({
             <NavLink to="#projects">Projects</NavLink>
             <NavLink to="#experiences">Experiences</NavLink>
             <NavLink to="#skills">Skills</NavLink>
+            <NavLink to="#contact">Contact</NavLink>
           </div>
         )}
       </div>

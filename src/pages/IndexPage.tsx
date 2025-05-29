@@ -6,6 +6,7 @@ import AboutSection from "../components/sections/AboutSection.tsx";
 import ProjectSection from "../components/sections/ProjectSection.tsx";
 import ExperienceSection from "../components/sections/ExperienceSection.tsx";
 import SkillSection from "../components/sections/SkillSection.tsx";
+import ContactSection from "../components/sections/ContactSection.tsx";
 
 export default function IndexPage() {
   useEffect(() => {
@@ -23,14 +24,15 @@ export default function IndexPage() {
   }, []);
   
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden bg-gradient-to-b from-[#161616] to-[#252525]">
       <Header />
-      <main className={`flex flex-col w-full space-y-16 bg-[#2D2D2D]`}>
+      <main className={`flex flex-col w-full space-y-16`}>
         <HomeSection />
         <AboutSection />
         <ProjectSection />
         <ExperienceSection />
         <SkillSection />
+        <ContactSection />
       </main>
       <Footer />
     </div>

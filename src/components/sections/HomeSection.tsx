@@ -1,11 +1,12 @@
 import React from "react";
 import Label from "../atoms/label.tsx";
+import Button from "../atoms/button.tsx";
 
 export default function HomeSection() {
   return (
     <React.Fragment>
       <div
-        className="min-h-fit bg-[#2D2D2D] w-full flex items-center justify-center text-center overflow-hidden relative"
+        className="min-h-fit w-full flex items-center justify-center text-center overflow-hidden relative"
         style={{ height: `calc(100 * var(--vh))` }}
         id="home"
       >
@@ -28,15 +29,18 @@ export default function HomeSection() {
               className="min-w-[200px]"
             >
               More About Me
-            </Button>
+            </Button> */}
             <Button
               onClick={() => {
-                window.location.href = "#contact";
+                const contactSection = document.querySelector("#contact");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
               }}
               className="min-w-[200px]"
             >
               Contact Me
-            </Button> */}
+            </Button>
           </div>
         </div>
         <div className="w-[40%] flex items-center ml-[10%]">

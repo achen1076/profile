@@ -10,7 +10,7 @@ export default function AboutSection() {
     <React.Fragment>
       <div id="about" className="h-[5vh]"></div>
       <div
-        className="min-h-fit bg-[#2D2D2D] w-full flex justify-center text-center overflow-hidden relative"
+        className="min-h-fit w-full flex justify-center text-center overflow-hidden relative"
         style={{ height: `calc(45 * var(--vh))` }}
       >
         <div className="w-4/5 text-center space-y-12">
@@ -23,6 +23,7 @@ export default function AboutSection() {
             <Label size="4xl" bold={true}>
               About Me
             </Label>
+            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full"></div>
           </div>
 
           <div className="w-full flex items-center justify-center space-y-4 flex-col md:flex-row md:space-y-0 space-x-8">
@@ -36,8 +37,23 @@ export default function AboutSection() {
                 <img src="./profile.png" alt="profile image" />
               </div>
               <div className="inline-flex items-center justify-center space-x-4 w-full">
-                <Button onClick={() => window.open("https://www.linkedin.com/in/andrew-chen-641444208/", "_blank")}>LinkedIn</Button>
-                <Button onClick={() => window.open("https://github.com/achen1076", "_blank")}>GitHub</Button>
+                <Button
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/in/andrew-chen-641444208/",
+                      "_blank"
+                    )
+                  }
+                >
+                  LinkedIn
+                </Button>
+                <Button
+                  onClick={() =>
+                    window.open("https://github.com/achen1076", "_blank")
+                  }
+                >
+                  GitHub
+                </Button>
               </div>
             </div>
 

@@ -8,7 +8,7 @@ export default function SkillSection() {
   return (
     <React.Fragment>
       <div
-        className="min-h-fit bg-[#2D2D2D] w-full flex items-center justify-center text-center overflow-hidden relative"
+        className="min-h-fit w-full flex items-center justify-center text-center overflow-hidden relative"
         style={{ height: `calc(100 * var(--vh))` }}
         id="skills"
       >
@@ -22,9 +22,10 @@ export default function SkillSection() {
             <Label size="4xl" bold={true}>
               Skills
             </Label>
+            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full"></div>
           </div>
           <div className={`w-full h-fit flex items-center justify-center`}>
-              <SkillsCard />
+            <SkillsCard />
           </div>
         </div>
       </div>

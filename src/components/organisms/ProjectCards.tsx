@@ -33,22 +33,19 @@ const ProjectCards = forwardRef<HTMLDivElement, ProjectCardProps>(
     const { width } = useWindowSize();
     const [aboveWidthThreshold, setAboveWidthThreshold] = useState(true);
     const cardRef = useRef<HTMLDivElement>(null);
-    
+
     useEffect(() => {
       setAboveWidthThreshold(width > 1024);
       const handleResize = () => setAboveWidthThreshold(width > 1024);
       window.addEventListener("resize", handleResize);
       return () => window.removeEventListener("resize", handleResize);
     }, [width]);
-    
 
-      
     const globalStyle =
       "flex flex-row items-center justify-center w-full min-h-fit";
-      
-    // Use a style object with the stable height calculation
+
     const containerStyle = {
-      height: `calc(33 * var(--vh))`
+      height: `calc(40 * var(--vh))`,
     };
 
     const variantMap = {
@@ -58,7 +55,12 @@ const ProjectCards = forwardRef<HTMLDivElement, ProjectCardProps>(
     };
 
     return (
-      <div className={cn(globalStyle, className)} style={containerStyle} ref={ref} {...props}>
+      <div
+        className={cn(globalStyle, className)}
+        style={containerStyle}
+        ref={ref}
+        {...props}
+      >
         {/* {variant === "right" && aboveWidthThreshold && (
           <div className="w-[calc((30vw+var(--vh))/2)] aspect-square bg-pink-500 relative max-w-[calc(350px)]">
             {ImageLink && <img src={ImageLink} alt="" />}
@@ -67,63 +69,92 @@ const ProjectCards = forwardRef<HTMLDivElement, ProjectCardProps>(
         <div
           ref={cardRef}
           className={cn(
-            `space-y-2 ${aboveWidthThreshold ? "w-1/2" : "w-4/5"} border border-gray-300 p-4 h-4/5 min-h-fit rounded-2xl relative`,
-            variantMap[variant],
-            color
+            `space-y-2 ${
+              aboveWidthThreshold ? "w-1/2" : "w-4/5"
+            } border border-gray-700 p-6 h-fit min-h-fit max-h-none rounded-2xl relative
+            bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg
+            hover:shadow-xl transition-all duration-300
+            hover:border-gray-600 group`,
+            variantMap[variant]
           )}
         >
           {variant === "right" && ProjectLink && (
             <div className="relative w-full mb-4">
               <div className="flex justify-end">
-                <div className="w-[50px] h-[50px] rounded-full flex items-center justify-center transition-all duration-300 -mb-10">
-                {LinkType === "github" ? <FaGithub
-                    className="w-full h-full cursor-pointer"
-                    onClick={() => window.open(ProjectLink, "_blank")}
-                  /> : LinkType === "gitlab" ? <FaGitlab
-                    className="w-full h-full cursor-pointer"
-                    onClick={() => window.open(ProjectLink, "_blank")}
-                  /> : <div></div>}
+                <div
+                  onClick={() =>
+                    ProjectLink && window.open(ProjectLink, "_blank")
+                  }
+                  className="w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all duration-300 -mb-10 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 p-2 hover:from-indigo-500/30 hover:to-purple-500/30 group-hover:scale-110 cursor-pointer z-10 relative"
+                >
+                  {LinkType === "github" ? (
+                    <FaGithub className="w-full h-full cursor-pointer text-white group-hover:text-cyan-300 transition-colors duration-300" />
+                  ) : LinkType === "gitlab" ? (
+                    <FaGitlab className="w-full h-full cursor-pointer text-white group-hover:text-cyan-300 transition-colors duration-300" />
+                  ) : (
+                    <div></div>
+                  )}
                 </div>
               </div>
             </div>
           )}
-          
+
           {variant === "left" && ProjectLink && (
             <div className="relative w-full mb-4">
               <div className="flex justify-start">
-                <div className="w-[50px] h-[50px] rounded-full flex items-center justify-center transition-all duration-300 -mb-10">
-                  {LinkType === "github" ? <FaGithub
-                    className="w-full h-full cursor-pointer"
-                    onClick={() => window.open(ProjectLink, "_blank")}
-                  /> : LinkType === "gitlab" ? <FaGitlab
-                    className="w-full h-full cursor-pointer"
-                    onClick={() => window.open(ProjectLink, "_blank")}
-                  /> : <div></div>}
+                <div
+                  onClick={() =>
+                    ProjectLink && window.open(ProjectLink, "_blank")
+                  }
+                  className="w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all duration-300 -mb-10 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 p-2 hover:from-indigo-500/30 hover:to-purple-500/30 group-hover:scale-110 cursor-pointer z-10 relative"
+                >
+                  {LinkType === "github" ? (
+                    <FaGithub className="w-full h-full cursor-pointer text-white group-hover:text-cyan-300 transition-colors duration-300" />
+                  ) : LinkType === "gitlab" ? (
+                    <FaGitlab className="w-full h-full cursor-pointer text-white group-hover:text-cyan-300 transition-colors duration-300" />
+                  ) : (
+                    <div></div>
+                  )}
                 </div>
               </div>
             </div>
           )}
 
           {variant === "center" && ProjectLink && (
-                 <div className="relative w-full mb-4">
-                 <div className="flex justify-end">
-                   <div className="w-[50px] h-[50px] rounded-full flex items-center justify-center transition-all duration-300 -mb-10">
-                     {LinkType === "github" ? <FaGithub
-                       className="w-full h-full cursor-pointer"
-                       onClick={() => window.open(ProjectLink, "_blank")}
-                     /> : LinkType === "gitlab" ? <FaGitlab
-                       className="w-full h-full cursor-pointer"
-                       onClick={() => window.open(ProjectLink, "_blank")}
-                     /> : <div></div>}
-                   </div>
-                 </div>
-               </div>
+            <div className="relative w-full mb-4">
+              <div className="flex justify-end">
+                <div
+                  onClick={() =>
+                    ProjectLink && window.open(ProjectLink, "_blank")
+                  }
+                  className="w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all duration-300 -mb-10 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 p-2 hover:from-indigo-500/30 hover:to-purple-500/30 group-hover:scale-110 cursor-pointer z-10 relative"
+                >
+                  {LinkType === "github" ? (
+                    <FaGithub className="w-full h-full cursor-pointer text-white group-hover:text-cyan-300 transition-colors duration-300" />
+                  ) : LinkType === "gitlab" ? (
+                    <FaGitlab className="w-full h-full cursor-pointer text-white group-hover:text-cyan-300 transition-colors duration-300" />
+                  ) : (
+                    <div></div>
+                  )}
+                </div>
+              </div>
+            </div>
           )}
-          
-          <Label size="2xl">{ProjectName}</Label>
-          <Label size="lg" className="pt-4">
-            {ProjectDescription}
+
+          <Label
+            size="2xl"
+            className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 relative z-10 group-hover:from-blue-400 group-hover:to-purple-500 transition-all duration-500"
+          >
+            {ProjectName}
           </Label>
+          <div className="pt-4 relative z-10 max-w-full overflow-visible">
+            <Label
+              size="lg"
+              className="text-gray-200 leading-relaxed whitespace-normal break-words"
+            >
+              {ProjectDescription}
+            </Label>
+          </div>
         </div>
         {/* {variant === "left" && aboveWidthThreshold && (
           <div className="w-[calc((30vw+var(--vh))/2)] aspect-fit bg-pink-500 relative max-w-[calc(350px)]">

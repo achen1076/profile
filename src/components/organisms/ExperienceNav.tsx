@@ -19,7 +19,9 @@ export default function ExperienceNav({
   return (
     <div
       ref={experienceAnimation.ref}
-      className={`flex items-center justify-center ${isTablet || isMobile ? "w-full" : "w-1/3"} min-w-[300px] h-full space-y-10 flex-col ${
+      className={`flex items-center justify-center ${
+        isTablet || isMobile ? "w-full" : "w-1/3"
+      } min-w-[300px] h-full space-y-10 flex-col ${
         experienceAnimation.isVisible ? "animate-fadeRight" : "opacity-0"
       } `}
     >
@@ -28,26 +30,29 @@ export default function ExperienceNav({
         experienceId={1}
         experienceTitle="Enterprise Architecture"
         company="Comerica Bank"
+        companyLogo="./media/comerica_logo.png"
       />
       <ExperienceLink
         setActiveExperience={setActiveExperience}
         experienceId={2}
         experienceTitle="DevSecOps"
         company="Comerica Bank"
+        companyLogo="./media/comerica_logo.png"
       />
       <ExperienceLink
         setActiveExperience={setActiveExperience}
         experienceId={3}
         experienceTitle="Web Architecture and Development"
         company="Michigan State University"
+        companyLogo="./media/msu_logo.svg"
       />
       <ExperienceLink
         setActiveExperience={setActiveExperience}
         experienceId={4}
         experienceTitle="Full Stack (Contracted)"
         company="Ally Financial"
+        companyLogo="./media/ally_logo.png"
       />
-      
     </div>
   );
 }

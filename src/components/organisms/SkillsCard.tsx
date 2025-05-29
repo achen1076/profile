@@ -148,24 +148,27 @@ export default function SkillsCard() {
 
   return (
     <div
-      className={`grid grid-cols-1 ${isTablet ? "md:grid-cols-1" : "md:grid-cols-3"} gap-4 md:gap-6 transform transition-all duration-700 w-full max-w-full px-2 md:px-0`}
+      className={`grid grid-cols-1 ${isTablet ? "md:grid-cols-1" : "md:grid-cols-3"} gap-6 md:gap-8 transform transition-all duration-700 w-full max-w-full px-2 md:px-0`}
       ref={skillAnimation.ref}
     >
       <div
-        className={`bg-gray-700 rounded-lg p-4 ${
+        className={`rounded-xl p-5 border border-gray-700 bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${
           skillAnimation.isVisible ? "animate-fadeRight" : "opacity-0"
         }`}
       >
-        <div className="bg-blue-500 rounded-t-lg p-2 mb-3">
-          <Label size="lg" bold={true} className="text-center cursor-default">
+        <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-bl-full"></div>
+        <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-teal-500/10 to-blue-500/10 rounded-tr-full"></div>
+        <div className="relative z-10 mb-4">
+          <Label size="xl" bold={true} className="text-center cursor-default text-white">
             Programming
           </Label>
+          <div className="h-0.5 w-16 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full mx-auto mt-2"></div>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
           {skillsData.programming.map((skill, index) => (
             <div
               key={index}
-              className="bg-gray-600 flex items-center justify-start flex-row rounded p-2 text-center text-white hover:bg-blue-400 transition-colors duration-300 cursor-default overflow-hidden"
+              className="bg-gray-800/70 backdrop-filter backdrop-blur-sm flex items-center justify-start flex-row rounded-lg p-2 text-center text-white hover:bg-blue-500/20 border border-gray-700 hover:border-blue-400/50 transition-all duration-300 cursor-default overflow-hidden"
               title={skill}
             >
               <span className="h-[25px] w-[25px] flex items-center justify-center">{getIcon(skill)}</span>
@@ -176,20 +179,23 @@ export default function SkillsCard() {
       </div>
 
       <div
-        className={`bg-gray-700 rounded-lg p-4 ${
+        className={`rounded-xl p-5 border border-gray-700 bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${
           skillAnimation.isVisible ? "animate-fadeUp" : "opacity-0"
         }`}
       >
-        <div className="bg-green-500 rounded-t-lg p-2 mb-3">
-          <Label size="lg" bold={true} className="text-center cursor-default">
+        <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-bl-full"></div>
+        <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-teal-500/10 to-green-500/10 rounded-tr-full"></div>
+        <div className="relative z-10 mb-4">
+          <Label size="xl" bold={true} className="text-center cursor-default text-white">
             Technology
           </Label>
+          <div className="h-0.5 w-16 bg-gradient-to-r from-green-400 to-teal-500 rounded-full mx-auto mt-2"></div>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
           {skillsData.technology.map((skill, index) => (
             <div
               key={index}
-              className="bg-gray-600 rounded p-2 flex items-center justify-start flex-row text-center text-white hover:bg-green-400 transition-colors duration-300 cursor-default overflow-hidden"
+              className="bg-gray-800/70 backdrop-filter backdrop-blur-sm rounded-lg p-2 flex items-center justify-start flex-row text-center text-white hover:bg-green-500/20 border border-gray-700 hover:border-green-400/50 transition-all duration-300 cursor-default overflow-hidden"
               title={skill}
             >
               <span className="h-[25px] w-[25px] flex items-center justify-center">{getIcon(skill)}</span>
@@ -200,20 +206,23 @@ export default function SkillsCard() {
       </div>
 
       <div
-        className={`bg-gray-700 rounded-lg p-4 ${
+        className={`rounded-xl p-5 border border-gray-700 bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${
           skillAnimation.isVisible ? "animate-fadeLeft" : "opacity-0"
         }`}
       >
-        <div className="bg-purple-500 rounded-t-lg p-2 mb-3">
-          <Label size="lg" bold={true} className="text-center cursor-default">
+        <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-bl-full"></div>
+        <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-indigo-500/10 to-purple-500/10 rounded-tr-full"></div>
+        <div className="relative z-10 mb-4">
+          <Label size="xl" bold={true} className="text-center cursor-default text-white">
             Libraries
           </Label>
+          <div className="h-0.5 w-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mx-auto mt-2"></div>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
           {skillsData.libraries.map((skill, index) => (
             <div
               key={index}
-              className="bg-gray-600 rounded p-2 flex items-center justify-start flex-row text-center text-white hover:bg-purple-400 transition-colors duration-300 cursor-default overflow-hidden"
+              className="bg-gray-800/70 backdrop-filter backdrop-blur-sm rounded-lg p-2 flex items-center justify-start flex-row text-center text-white hover:bg-purple-500/20 border border-gray-700 hover:border-purple-400/50 transition-all duration-300 cursor-default overflow-hidden"
               title={skill}
             >
               <span className="h-[25px] w-[25px] flex items-center justify-center">{getIcon(skill)}</span>

@@ -70,10 +70,13 @@ const Timeline: React.FC<TimelineProps> = ({ className }) => {
   ];
 
   return (
-    <div className={cn(globalStyle, className)}>
-      <Label size="4xl" bold={true}>
-        Projects
-      </Label>
+    <div className={cn(globalStyle, className, "relative z-10")}>
+      <div className="relative inline-block">
+        <Label size="4xl" bold={true} className="text-white">
+          Projects
+        </Label>
+        <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full"></div>
+      </div>
       <div>
         <ProjectCards
           variant={aboveWidthThreshold ? "left" : "center"}

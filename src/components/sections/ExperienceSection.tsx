@@ -12,10 +12,10 @@ export default function ExperienceSection() {
 
   return (
     <React.Fragment>
+      <div id="experiences" className="h-[6vh]"></div>
       <div
         className="min-h-fit bg-[#2D2D2D] w-full flex items-center justify-center text-center overflow-hidden relative"
-        style={{ height: `calc(100 * var(--vh))` }}
-        id="experiences"
+        style={{ height: `calc(50 * var(--vh))` }}
       >
         <div className={`w-4/5 text-center space-y-16`}>
           <div

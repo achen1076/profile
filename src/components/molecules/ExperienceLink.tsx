@@ -4,24 +4,33 @@ import { useWindowSize } from "../../hooks/useWindowSize.tsx";
 
 export default function ExperienceLink({
   setActiveExperience = () => {},
-  experienceId = 3,
+  experienceId = 1,
+  experienceTitle = "Experience 1",
+  company = "Company",
 }: {
   setActiveExperience?: (id: number) => void;
   experienceId?: number;
+  experienceTitle?: string;
+  company?: string;
 }) {
-  const { isMobile } = useWindowSize();
+  const { isMobile, isTablet } = useWindowSize();
 
   return (
-    <div className="w-full h-fit flex items-center cursor-pointer justify-center pt-2 pb-2 pl-6 pr-6 space-x-4 bg-red-500 rounded-md">
-      <div className="w-10 h-10 bg-pink-500"></div>
+    <div className={`w-full h-1/2 flex items-center cursor-pointer  pt-2 pb-2 pl-6 pr-6 space-x-4 border-2 border-purple-500
+     rounded-md text-left hover:bg-[#1d1d1d] hover:bg-opacity-50 transition-all duration-100`} 
+     onClick={() => setActiveExperience(experienceId)}>
+      <div className="h-12 w-12 aspect-square bg-pink-500"></div>
+      <div className="flex flex-col space-y-1 ">
       <Label
-        size={`${isMobile ? "xl" : "2xl"}`}
-        className="h-1/12 cursor-pointer hover:border-b-2 hover:border-gray-300 transition-all duration-100"
+        size={`${isMobile || isTablet ? "lg" : "xl"}`}
+        className="cursor-pointer"
         bold={true}
-        onClick={() => setActiveExperience(experienceId)}
+        
       >
-        Experience {experienceId}
+        {experienceTitle}
       </Label>
+      <Label size={`${isMobile || isTablet ? "md" : "lg"}`} bold={true} className="cursor-pointer">{company}</Label>
+      </div>
     </div>
   );
 }

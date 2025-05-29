@@ -30,34 +30,42 @@ const Timeline: React.FC<TimelineProps> = ({ className }) => {
 
   const projectInfo = [
     {
-      name: "Project 1",
+      name: "AndrewNathanChen (old)",
       description:
-        "This is the detailed description for Project 1. It includes responsibilities, technologies used, and achievements.",
-      link: "a",
+        `I created my personal portfolio site from scratch using React, HTML, CSS, and TypeScript. It includes interactive animations, custom transitions, 
+        and dynamic components driven by React hooks and state. The site showcases my technical work, background, and ways to get in touch. It’s a reflection of my early stages of front-end development 
+        skills and design creativity.`,
+      link: "https://github.com/achen1076/portfolio",
+      linkType: "github",
+      imageLink: "media/test.png"
     },
     {
-      name: "Project 2",
+      name: "Bajamas",
       description:
-        "This is the detailed description for Project 2. It showcases different projects and skills developed during this period.",
-      link: "a",
+        `Bajamas was my first full-stack web app, built with React, HTML, CSS, and JavaScript on the frontend, Firebase and Django on the backend. I implemented authentication and different role-based views, so every registered user had a unique interface. This project helped me understand the interaction between client-side rendering and backend logic. I also learned how to manage data securely and build scalable front-end components. It was a major step forward in my journey as a web developer.`,
+      link: "https://github.com/achen1076/da",
+      linkType: "github",
     },
     {
-      name: "Project 3",
+      name: "AI Email Sentiment Analysis – Ally Financial",
       description:
-        "This is the detailed description for Project 3. It highlights leadership roles and collaborative efforts on major initiatives.",
+        `I worked with a team on the development of an AI-based sentiment analysis system for Ally Bank that monitored over 100 email threads daily. I created an Outlook widget and a dashboard using Flask, React, PostgreSQL, LangChain, and OpenAI API. The system achieved over 95% accuracy and could handle more than 500 threads simultaneously. My solution cut email review time by 30% and helped 2,500+ users gain insights faster. This project combined my backend engineering skills with my interest in NLP and real-time analytics.`,
+      link: "https://gitlab.msu.edu/cse-498-team-ally/website",
+      linkType: "gitlab",
+    },
+    {
+      name: "Angry Birds C++ Application",
+      description:
+        `This was a fully playable recreation of Angry Birds developed in C++ as part of a team project. I led a group of five students using the Agile development model, organizing sprint meetings and coordinating our efforts across different modules. The game featured real-time physics, collision detection, object management, and a scoring system, all built with over 25 custom C++ classes and multiple third-party libraries. We emphasized modularity and scalability so the game could be easily expanded with new levels or features.`,
+      link: "https://gitlab.msu.edu/common-grackle/project1/-/tree/master",
+      linkType: "gitlab",
+    },
+    {
+      name: "Keyframe Movie Maker",
+      description:
+       `This was an earlier project where I built a lightweight movie maker tool using C++ and graphical libraries. The application allowed users to load image frames, sequence them on a timeline, and export a basic animated movie. I focused on managing memory effectively while handling large image files and ensuring smooth playback. This project helped me gain confidence with file I/O operations, basic multimedia processing, and performance optimization in C++. It laid the groundwork for my later work on more complex animation systems like the Keyframe Movie Maker`,
       link: "",
-    },
-    {
-      name: "Project 4",
-      description:
-        "This is the detailed description for Project 4. It demonstrates problem-solving abilities and technical expertise in various domains.",
-      link: "",
-    },
-    {
-      name: "Project 5",
-      description:
-        "This is the detailed description for Project 5. It includes responsibilities, technologies used, and achievements.",
-      link: "",
+      linkType: "gitlab",
     },
   ];
 
@@ -77,6 +85,8 @@ const Timeline: React.FC<TimelineProps> = ({ className }) => {
           ProjectName={projectInfo[0].name}
           ProjectDescription={projectInfo[0].description}
           ProjectLink={projectInfo[0].link}
+          ImageLink={projectInfo[0].imageLink}
+          LinkType={projectInfo[0].linkType}
         />
         <ProjectCards
           variant={aboveWidthThreshold ? "right" : "center"}
@@ -88,6 +98,8 @@ const Timeline: React.FC<TimelineProps> = ({ className }) => {
           ProjectName={projectInfo[1].name}
           ProjectDescription={projectInfo[1].description}
           ProjectLink={projectInfo[1].link}
+          LinkType={projectInfo[1].linkType}
+          ImageLink={projectInfo[1].imageLink}
         />
         <ProjectCards
           variant={aboveWidthThreshold ? "left" : "center"}
@@ -99,6 +111,7 @@ const Timeline: React.FC<TimelineProps> = ({ className }) => {
           ProjectName={projectInfo[2].name}
           ProjectDescription={projectInfo[2].description}
           ProjectLink={projectInfo[2].link}
+          LinkType={projectInfo[2].linkType}
         />
         <ProjectCards
           variant={aboveWidthThreshold ? "right" : "center"}
@@ -110,6 +123,7 @@ const Timeline: React.FC<TimelineProps> = ({ className }) => {
           ProjectName={projectInfo[3].name}
           ProjectDescription={projectInfo[3].description}
           ProjectLink={projectInfo[3].link}
+          LinkType={projectInfo[3].linkType}
         />
         <ProjectCards
           variant= {aboveWidthThreshold ? "left" : "center"}
@@ -121,8 +135,10 @@ const Timeline: React.FC<TimelineProps> = ({ className }) => {
           ProjectName={projectInfo[4].name}
           ProjectDescription={projectInfo[4].description}
           ProjectLink={projectInfo[4].link}
+          LinkType={projectInfo[4].linkType}
         />
       </div>
+      
     </div>
   );
 };

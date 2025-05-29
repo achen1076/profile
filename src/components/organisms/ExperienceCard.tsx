@@ -19,24 +19,40 @@ export default function ExperienceCard({
 
   const experienceData = [
     {
-      title: "Experience 1",
+      title: "Enterprise Architecture",
       content:
-        "This is the detailed description for Experience 1. It includes responsibilities, technologies used, and achievements.",
+        <>• Engineered and launched 5+ enterprise applications using Microsoft tools, automating workflows and reducing manual effort by up to 20%.<br /><br />
+• Designed and integrated 10+ APIs into enterprise applications using Postman and other API services, enhancing system interoperability.<br /><br />
+• Completed 30+ hours of AWS Cloud training, gaining advanced proficiency in cloud architecture and deployment.<br /><br />
+• Optimized backend database performance for 5+ critical applications, achieving 99.9% uptime and ensuring reliability.</>,
+      company: "Comerica Bank",
     },
     {
-      title: "Experience 2",
+      title: "DevSecOps",
       content:
-        "This is the detailed description for Experience 2. It showcases different projects and skills developed during this period.",
+        <>• Orchestrated and optimized custom and COTS Jenkins pipelines, streamlining CI/CD processes for enhanced efficiency.<br /><br />
+• Automated infrastructure deployment by leveraging Terraform for 15+ AWS modules, enabling scalability and reliability.<br /><br />
+• Spearheaded the AWS 2.0 migration project, successfully onboarding 10+ applications to upgraded pipelines.<br /><br />
+• Designed and implemented a scoring framework to assess pipeline progress for 50+ applications, driving informed prioritization and decision-making.<br /><br />
+• Enhanced code quality and security by resolving 100+ issues using tools like SonarQube and SNYK.</>,
+      company: "Comerica Bank",
     },
     {
-      title: "Experience 3",
+      title: "Web Application Architecture and Development ULA",
       content:
-        "This is the detailed description for Experience 3. It highlights leadership roles and collaborative efforts on major initiatives.",
+        <>• Evaluated and graded 50+ student projects, providing actionable feedback to enhance code quality, user experience, and technical functionality.<br /><br />
+• Delivered personalized mentoring to 200+ undergraduate students, clarifying concepts in full-stack development, including HTML, CSS, JavaScript, Flask, Docker, and Python.<br /><br />
+• Conducted 1-on-1 sessions and facilitated lab activities, reinforcing principles of responsive design, software architecture, and best coding practices.</>,
+      company: "Michigan State University",
     },
     {
-      title: "Experience 4",
+      title: "Full Stack (Contracted)",
       content:
-        "This is the detailed description for Experience 4. It demonstrates problem-solving abilities and technical expertise in various domains.",
+        <>• Designed and deployed an Outlook widget to monitor 100+ email threads daily, enabling real-time sentiment tracking and improved communication.<br /><br />
+• Developed a web application dashboard offering actionable insights, reducing email analysis time by 30% and enhancing decision-making.<br /><br />
+• Architected a robust back end using Python, PostgreSQL, LangChain, and OpenAI API, achieving 95%+ accuracy in email sentiment detection.<br /><br />
+• Delivered a scalable solution managing 500+ email chains concurrently, boosting operational efficiency for 2,500+ employees.</>,
+      company: "Ally Financial",
     },
   ];
 
@@ -68,17 +84,17 @@ export default function ExperienceCard({
       ref={experienceAnimation.ref}
       className={`${
         (isTablet || isMobile) ? "w-full" : "w-2/3"
-      } h-fit rounded-3xl pt-4 pb-4 pl-8 pr-8 space-y-8 transition-all duration-300 bg-purple-500 ${
+      } h-fit rounded-3xl pt-4 pb-8 pl-8 pr-8 space-y-8 transition-all duration-300 min-h-[550px] bg-[#222222] border-2 border-white ${
         experienceAnimation.isVisible ? "animate-fadeLeft" : "opacity-0"
       }`}
     >
-      <div className={``}>
-        <Label size="2xl" bold={true} className={`transform ${textAnimation}`}>
-          {currentExperience.title}
+      <div className="w-full">
+        <Label size="2xl" bold={true} className={`transform ${textAnimation} w-full`}>
+          {currentExperience.title + " @ " + currentExperience.company}
         </Label>
       </div>
-      <div className={` min-h-[300px]`}>
-        <Label size="lg" className={`transform ${textAnimation}`}>
+      <div className={`flex items-start`}>
+        <Label size="lg" className={`transform ${textAnimation} text-left`}>
           {currentExperience.content}
         </Label>
       </div>

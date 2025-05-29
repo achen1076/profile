@@ -1,5 +1,4 @@
 import React from "react";
-import Label from "../atoms/label.tsx";
 import { useWindowSize } from "../../hooks/useWindowSize.tsx";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation.tsx";
 import ExperienceLink from "../molecules/ExperienceLink.tsx";
@@ -20,25 +19,33 @@ export default function ExperienceNav({
   return (
     <div
       ref={experienceAnimation.ref}
-      className={`flex items-center justify-center ${isTablet || isMobile ? "w-full" : "w-1/4"} h-full space-y-12 min-w-fit flex-col ${
+      className={`flex items-center justify-center ${isTablet || isMobile ? "w-full" : "w-1/3"} min-w-[300px] h-full space-y-10 flex-col ${
         experienceAnimation.isVisible ? "animate-fadeRight" : "opacity-0"
       } `}
     >
       <ExperienceLink
         setActiveExperience={setActiveExperience}
         experienceId={1}
+        experienceTitle="Enterprise Architecture"
+        company="Comerica Bank"
       />
       <ExperienceLink
         setActiveExperience={setActiveExperience}
         experienceId={2}
+        experienceTitle="DevSecOps"
+        company="Comerica Bank"
       />
       <ExperienceLink
         setActiveExperience={setActiveExperience}
         experienceId={3}
+        experienceTitle="Web Architecture and Development"
+        company="Michigan State University"
       />
       <ExperienceLink
         setActiveExperience={setActiveExperience}
         experienceId={4}
+        experienceTitle="Full Stack (Contracted)"
+        company="Ally Financial"
       />
       
     </div>

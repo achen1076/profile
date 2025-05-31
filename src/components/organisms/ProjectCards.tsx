@@ -45,7 +45,7 @@ const ProjectCards = forwardRef<HTMLDivElement, ProjectCardProps>(
       "flex flex-row items-center justify-center w-full min-h-fit";
 
     const containerStyle = {
-      height: `calc(40 * var(--vh))`,
+      height: `calc(33 * var(--vh))`,
     };
 
     const variantMap = {
@@ -57,7 +57,7 @@ const ProjectCards = forwardRef<HTMLDivElement, ProjectCardProps>(
     return (
       <div
         className={cn(globalStyle, className)}
-        style={containerStyle}
+        // style={containerStyle}
         ref={ref}
         {...props}
       >

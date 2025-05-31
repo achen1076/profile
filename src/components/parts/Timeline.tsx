@@ -77,7 +77,7 @@ const Timeline: React.FC<TimelineProps> = ({ className }) => {
         </Label>
         <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full"></div>
       </div>
-      <div>
+      <div className="space-y-8">
         <ProjectCards
           variant={aboveWidthThreshold ? "left" : "center"}
           color="bg-red-500"

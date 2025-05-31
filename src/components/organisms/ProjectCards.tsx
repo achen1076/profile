@@ -57,7 +57,7 @@ const ProjectCards = forwardRef<HTMLDivElement, ProjectCardProps>(
     return (
       <div
         className={cn(globalStyle, className)}
-        // style={containerStyle}
+        style={containerStyle}
         ref={ref}
         {...props}
       >

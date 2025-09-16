@@ -44,7 +44,7 @@ export default function HomeSection() {
           </div>
         </div>
         <div className="w-[40%] flex items-center ml-[10%]">
-          <img src="./profile.png" alt="profile image" />
+          {/* <img src="./profile.png" alt="profile image" /> */}
         </div>
       </div>
     </React.Fragment>

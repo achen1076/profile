@@ -36,7 +36,7 @@ export default function AboutSection() {
               <div className="w-64 h-64 mx-auto mb-4 overflow-hidden rounded-full border-4 border-gray-600 shadow-lg">
                 <img 
                   src="./media/linkedin_profile.png" 
-                  alt="profile image"
+                  alt="Andrew Chen"
                   className="w-full h-full object-cover object-center"
                 />
               </div>

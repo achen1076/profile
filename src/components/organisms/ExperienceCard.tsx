@@ -11,7 +11,6 @@ export default function ExperienceCard({
   activeExperience,
 }: ExperienceCardProps) {
   const { isMobile, isTablet } = useWindowSize();
-  const [animating, setAnimating] = useState(false);
   const [displayedExperience, setDisplayedExperience] =
     useState(activeExperience);
   const [textAnimation, setTextAnimation] = useState("");
@@ -135,7 +134,6 @@ export default function ExperienceCard({
 
   useEffect(() => {
     if (displayedExperience !== activeExperience) {
-      setAnimating(true);
       setTextAnimation("animate-textFadeOut");
 
       const timer = setTimeout(() => {
@@ -143,7 +141,6 @@ export default function ExperienceCard({
         setTextAnimation("animate-textFadeIn");
 
         const resetTimer = setTimeout(() => {
-          setAnimating(false);
           setTextAnimation("");
         }, 400);
 

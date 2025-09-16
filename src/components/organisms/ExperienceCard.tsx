@@ -19,25 +19,70 @@ export default function ExperienceCard({
 
   const experienceData = [
     {
-      title: "Enterprise Architecture",
+      title: "Full Stack Developer",
       content: (
         <>
-          • Engineered and launched 5+ enterprise applications using Microsoft
-          tools, automating workflows and reducing manual effort by up to 20%.
+          • Lead developer for implementation on a critical and multifaceted
+          project, leading coding efforts and ensuring timely, high-quality
+          delivery.
           <br />
           <br />
-          • Designed and integrated 10+ APIs into enterprise applications using
-          Postman and other API services, enhancing system interoperability.
+          • Worked on an Angular front end, .NET (C#) back end, and SQL
+          database, building and maintaining enterprise-level applications.
           <br />
           <br />
-          • Completed 30+ hours of AWS Cloud training, gaining advanced
-          proficiency in cloud architecture and deployment.
+          • Designed and implemented dynamic web pages and full-stack
+          integrations, including API endpoints, service calls, and logging
+          mechanisms.
           <br />
-          <br />• Optimized backend database performance for 5+ critical
-          applications, achieving 99.9% uptime and ensuring reliability.
+          <br />• Contributed to the company-wide component library by updating
+          and enhancing reusable components for consistent UI/UX across
+          projects.
         </>
       ),
-      company: "Comerica Bank",
+      company: "Auto-Owners Insurance",
+    },
+    {
+      title: "Full Stack (Contracted)",
+      content: (
+        <>
+          • Designed and deployed an Outlook widget to monitor 100+ email
+          threads daily, enabling real-time sentiment tracking and improved
+          communication.
+          <br />
+          <br />
+          • Developed a web application dashboard offering actionable insights,
+          reducing email analysis time by 30% and enhancing decision-making.
+          <br />
+          <br />
+          • Architected a robust back end using Python, PostgreSQL, LangChain,
+          and OpenAI API, achieving 95%+ accuracy in email sentiment detection.
+          <br />
+          <br />• Delivered a scalable solution managing 500+ email chains
+          concurrently, boosting operational efficiency for 2,500+ employees.
+        </>
+      ),
+      company: "Ally Financial",
+    },
+    {
+      title: "Web Application Architecture and Development ULA",
+      content: (
+        <>
+          • Evaluated and graded 50+ student projects, providing actionable
+          feedback to enhance code quality, user experience, and technical
+          functionality.
+          <br />
+          <br />
+          • Delivered personalized mentoring to 200+ undergraduate students,
+          clarifying concepts in full-stack development, including HTML, CSS,
+          JavaScript, Flask, Docker, and Python.
+          <br />
+          <br />• Conducted 1-on-1 sessions and facilitated lab activities,
+          reinforcing principles of responsive design, software architecture,
+          and best coding practices.
+        </>
+      ),
+      company: "Michigan State University",
     },
     {
       title: "DevSecOps",
@@ -66,46 +111,25 @@ export default function ExperienceCard({
       company: "Comerica Bank",
     },
     {
-      title: "Web Application Architecture and Development ULA",
+      title: "Enterprise Architecture",
       content: (
         <>
-          • Evaluated and graded 50+ student projects, providing actionable
-          feedback to enhance code quality, user experience, and technical
-          functionality.
+          • Engineered and launched 5+ enterprise applications using Microsoft
+          tools, automating workflows and reducing manual effort by up to 20%.
           <br />
           <br />
-          • Delivered personalized mentoring to 200+ undergraduate students,
-          clarifying concepts in full-stack development, including HTML, CSS,
-          JavaScript, Flask, Docker, and Python.
+          • Designed and integrated 10+ APIs into enterprise applications using
+          Postman and other API services, enhancing system interoperability.
           <br />
-          <br />• Conducted 1-on-1 sessions and facilitated lab activities,
-          reinforcing principles of responsive design, software architecture,
-          and best coding practices.
+          <br />
+          • Completed 30+ hours of AWS Cloud training, gaining advanced
+          proficiency in cloud architecture and deployment.
+          <br />
+          <br />• Optimized backend database performance for 5+ critical
+          applications, achieving 99.9% uptime and ensuring reliability.
         </>
       ),
-      company: "Michigan State University",
-    },
-    {
-      title: "Full Stack (Contracted)",
-      content: (
-        <>
-          • Designed and deployed an Outlook widget to monitor 100+ email
-          threads daily, enabling real-time sentiment tracking and improved
-          communication.
-          <br />
-          <br />
-          • Developed a web application dashboard offering actionable insights,
-          reducing email analysis time by 30% and enhancing decision-making.
-          <br />
-          <br />
-          • Architected a robust back end using Python, PostgreSQL, LangChain,
-          and OpenAI API, achieving 95%+ accuracy in email sentiment detection.
-          <br />
-          <br />• Delivered a scalable solution managing 500+ email chains
-          concurrently, boosting operational efficiency for 2,500+ employees.
-        </>
-      ),
-      company: "Ally Financial",
+      company: "Comerica Bank",
     },
   ];
 

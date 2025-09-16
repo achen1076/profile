@@ -2,15 +2,45 @@ import React from "react";
 import Label from "../atoms/label.tsx";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation.tsx";
 import { useWindowSize } from "../../hooks/useWindowSize.tsx";
-import { 
-  FaPython, FaJava, FaJs, FaNodeJs, FaReact, FaHtml5, FaGit, 
-  FaAws, FaDocker, FaCode, FaTerminal, FaJenkins, FaFigma, FaChartBar
+import {
+  FaPython,
+  FaJava,
+  FaJs,
+  FaNodeJs,
+  FaReact,
+  FaHtml5,
+  FaGit,
+  FaAws,
+  FaAngular,
+  FaDocker,
+  FaCode,
+  FaTerminal,
+  FaJenkins,
+  FaFigma,
+  FaChartBar,
 } from "react-icons/fa";
-import { 
-  SiTailwindcss, SiTypescript, SiDjango, SiFlask, SiTerraform,
-  SiKubernetes, SiPostgresql, SiPostman, SiTensorflow,
-  SiPytorch, SiPandas, SiNumpy, SiScikitlearn, SiOpencv, SiCplusplus,
-  SiAnsible, SiKeras, SiLangchain
+import {
+  SiTailwindcss,
+  SiTypescript,
+  SiDjango,
+  SiFlask,
+  SiTerraform,
+  SiKubernetes,
+  SiPostgresql,
+  SiPostman,
+  SiTensorflow,
+  SiPytorch,
+  SiPandas,
+  SiNumpy,
+  SiScikitlearn,
+  SiOpencv,
+  SiCplusplus,
+  SiAnsible,
+  SiKeras,
+  SiLangchain,
+  SiAmazonec2,
+  SiAmazonrds,
+  SiAmazons3,
 } from "react-icons/si";
 import { BsFiletypeSql } from "react-icons/bs";
 import { BiData } from "react-icons/bi";
@@ -20,6 +50,8 @@ const getIcon = (skill: string) => {
   switch (skill.toLowerCase()) {
     case "react":
       return <FaReact className="h-[25px] w-[25px]" />;
+    case "angular":
+      return <FaAngular className="h-[25px] w-[25px]" />;
     case "javascript":
       return <FaJs className="h-[25px] w-[25px]" />;
     case "html/css":
@@ -47,6 +79,32 @@ const getIcon = (skill: string) => {
     case "flask":
       return <SiFlask className="h-[25px] w-[25px]" />;
     case "aws":
+      return <FaAws className="h-[25px] w-[25px]" />;
+    case "ec2":
+      return <SiAmazonec2 className="h-[25px] w-[25px]" />;
+    case "alb":
+      return <FaAws className="h-[25px] w-[25px]" />;
+    case "nlb":
+      return <FaAws className="h-[25px] w-[25px]" />;
+    case "vpc":
+      return <FaAws className="h-[25px] w-[25px]" />;
+    case "security groups":
+      return <FaAws className="h-[25px] w-[25px]" />;
+    case "s3":
+      return <SiAmazons3 className="h-[25px] w-[25px]" />;
+    case "lambda":
+      return <FaAws className="h-[25px] w-[25px]" />;
+    case "eventbridge":
+      return <FaAws className="h-[25px] w-[25px]" />;
+    case "dynamodb":
+      return <FaAws className="h-[25px] w-[25px]" />;
+    case "rds":
+      return <SiAmazonrds className="h-[25px] w-[25px]" />;
+    case "route 53":
+      return <FaAws className="h-[25px] w-[25px]" />;
+    case "sdk":
+      return <FaAws className="h-[25px] w-[25px]" />;
+    case "kms":
       return <FaAws className="h-[25px] w-[25px]" />;
     case "terraform":
       return <SiTerraform className="h-[25px] w-[25px]" />;
@@ -103,6 +161,7 @@ export default function SkillsCard() {
   const skillsData = {
     programming: [
       "React",
+      "Angular",
       "JavaScript",
       "HTML/CSS",
       "Tailwind CSS",
@@ -118,7 +177,6 @@ export default function SkillsCard() {
     technology: [
       "Django",
       "Flask",
-      "AWS",
       "Terraform",
       "Jenkins",
       "Docker",
@@ -130,6 +188,21 @@ export default function SkillsCard() {
       "Figma",
       "Git",
       "CI/CD",
+    ],
+    aws: [
+      "EC2",
+      "ALB",
+      "NLB",
+      "VPC",
+      "Security Groups",
+      "S3",
+      "Lambda",
+      "EventBridge",
+      "DynamoDB",
+      "RDS",
+      "Route 53",
+      "SDK",
+      "KMS",
     ],
     libraries: [
       "OpenAI",
@@ -148,87 +221,149 @@ export default function SkillsCard() {
 
   return (
     <div
-      className={`grid grid-cols-1 ${isTablet ? "md:grid-cols-1" : "md:grid-cols-3"} gap-6 md:gap-8 transform transition-all duration-700 w-full max-w-full px-2 md:px-0`}
+      className="transform transition-all duration-700 w-full max-w-full px-2 md:px-0"
       ref={skillAnimation.ref}
     >
-      <div
-        className={`rounded-xl p-5 border border-gray-700 bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${
-          skillAnimation.isVisible ? "animate-fadeRight" : "opacity-0"
-        }`}
-      >
-        <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-bl-full"></div>
-        <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-teal-500/10 to-blue-500/10 rounded-tr-full"></div>
-        <div className="relative z-10 mb-4">
-          <Label size="xl" bold={true} className="text-center cursor-default text-white">
-            Programming
-          </Label>
-          <div className="h-0.5 w-16 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full mx-auto mt-2"></div>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
-          {skillsData.programming.map((skill, index) => (
-            <div
-              key={index}
-              className="bg-gray-800/70 backdrop-filter backdrop-blur-sm flex items-center justify-start flex-row rounded-lg p-2 text-center text-white hover:bg-blue-500/20 border border-gray-700 hover:border-blue-400/50 transition-all duration-300 cursor-default overflow-hidden"
-              title={skill}
+      {/* First row with 3 boxes */}
+      <div className={`grid grid-cols-1 ${
+        isTablet ? "grid-cols-1" : "md:grid-cols-3"
+      } gap-6 md:gap-8 mb-6 md:mb-8`}>
+        {/* Programming Box */}
+        <div
+          className={`rounded-xl p-5 border border-gray-700 bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${
+            skillAnimation.isVisible ? "animate-fadeRight" : "opacity-0"
+          }`}
+        >
+          <div className="relative z-10 mb-4">
+            <Label
+              size="xl"
+              bold={true}
+              className="text-center cursor-default text-white"
             >
-              <span className="h-[25px] w-[25px] flex items-center justify-center">{getIcon(skill)}</span>
-              <span className="block truncate text-sm ml-[calc(5%)]">{skill}</span>
-            </div>
-          ))}
+              Programming
+            </Label>
+            <div className="h-0.5 w-16 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full mx-auto mt-2"></div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
+            {skillsData.programming.map((skill, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/70 backdrop-filter backdrop-blur-sm flex items-center justify-start flex-row rounded-lg p-2 text-center text-white hover:bg-blue-500/20 border border-gray-700 hover:border-blue-400/50 transition-all duration-300 cursor-default overflow-hidden"
+                title={skill}
+              >
+                <span className="h-[25px] w-[25px] flex items-center justify-center">
+                  {getIcon(skill)}
+                </span>
+                <span className="block truncate text-sm ml-[calc(5%)]">
+                  {skill}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Technology Box */}
+        <div
+          className={`rounded-xl p-5 border border-gray-700 bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${
+            skillAnimation.isVisible ? "animate-fadeUp" : "opacity-0"
+          }`}
+        >
+          <div className="relative z-10 mb-4">
+            <Label
+              size="xl"
+              bold={true}
+              className="text-center cursor-default text-white"
+            >
+              Technology
+            </Label>
+            <div className="h-0.5 w-16 bg-gradient-to-r from-green-400 to-teal-500 rounded-full mx-auto mt-2"></div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
+            {skillsData.technology.map((skill, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/70 backdrop-filter backdrop-blur-sm rounded-lg p-2 flex items-center justify-start flex-row text-center text-white hover:bg-green-500/20 border border-gray-700 hover:border-green-400/50 transition-all duration-300 cursor-default overflow-hidden"
+                title={skill}
+              >
+                <span className="h-[25px] w-[25px] flex items-center justify-center">
+                  {getIcon(skill)}
+                </span>
+                <span className="block truncate text-sm ml-[calc(5%)]">
+                  {skill}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Libraries Box */}
+        <div
+          className={`rounded-xl p-5 border border-gray-700 bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${
+            skillAnimation.isVisible ? "animate-fadeLeft" : "opacity-0"
+          }`}
+        >
+          <div className="relative z-10 mb-4">
+            <Label
+              size="xl"
+              bold={true}
+              className="text-center cursor-default text-white"
+            >
+              Libraries
+            </Label>
+            <div className="h-0.5 w-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mx-auto mt-2"></div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
+            {skillsData.libraries.map((skill, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/70 backdrop-filter backdrop-blur-sm rounded-lg p-2 flex items-center justify-start flex-row text-center text-white hover:bg-purple-500/20 border border-gray-700 hover:border-purple-400/50 transition-all duration-300 cursor-default overflow-hidden"
+                title={skill}
+              >
+                <span className="h-[25px] w-[25px] flex items-center justify-center">
+                  {getIcon(skill)}
+                </span>
+                <span className="block truncate text-sm ml-[calc(5%)]">
+                  {skill}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      <div
-        className={`rounded-xl p-5 border border-gray-700 bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${
-          skillAnimation.isVisible ? "animate-fadeUp" : "opacity-0"
-        }`}
-      >
-        <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-bl-full"></div>
-        <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-teal-500/10 to-green-500/10 rounded-tr-full"></div>
-        <div className="relative z-10 mb-4">
-          <Label size="xl" bold={true} className="text-center cursor-default text-white">
-            Technology
-          </Label>
-          <div className="h-0.5 w-16 bg-gradient-to-r from-green-400 to-teal-500 rounded-full mx-auto mt-2"></div>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
-          {skillsData.technology.map((skill, index) => (
-            <div
-              key={index}
-              className="bg-gray-800/70 backdrop-filter backdrop-blur-sm rounded-lg p-2 flex items-center justify-start flex-row text-center text-white hover:bg-green-500/20 border border-gray-700 hover:border-green-400/50 transition-all duration-300 cursor-default overflow-hidden"
-              title={skill}
+      {/* Second row with centered AWS box */}
+      <div className={`${isTablet ? "block" : "flex justify-center"}`}>
+        <div
+          className={`rounded-xl p-5 border border-gray-700 bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${
+            isTablet ? "w-full" : "w-full max-w-sm"
+          } ${skillAnimation.isVisible ? "animate-fadeUp" : "opacity-0"}`}
+        >
+          <div className="relative z-10 mb-4">
+            <Label
+              size="xl"
+              bold={true}
+              className="text-center cursor-default text-white"
             >
-              <span className="h-[25px] w-[25px] flex items-center justify-center">{getIcon(skill)}</span>
-              <span className="block truncate text-sm ml-[calc(5%)]">{skill}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div
-        className={`rounded-xl p-5 border border-gray-700 bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${
-          skillAnimation.isVisible ? "animate-fadeLeft" : "opacity-0"
-        }`}
-      >
-        <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-bl-full"></div>
-        <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-indigo-500/10 to-purple-500/10 rounded-tr-full"></div>
-        <div className="relative z-10 mb-4">
-          <Label size="xl" bold={true} className="text-center cursor-default text-white">
-            Libraries
-          </Label>
-          <div className="h-0.5 w-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mx-auto mt-2"></div>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
-          {skillsData.libraries.map((skill, index) => (
-            <div
-              key={index}
-              className="bg-gray-800/70 backdrop-filter backdrop-blur-sm rounded-lg p-2 flex items-center justify-start flex-row text-center text-white hover:bg-purple-500/20 border border-gray-700 hover:border-purple-400/50 transition-all duration-300 cursor-default overflow-hidden"
-              title={skill}
-            >
-              <span className="h-[25px] w-[25px] flex items-center justify-center">{getIcon(skill)}</span>
-              <span className="block truncate text-sm ml-[calc(5%)]">{skill}</span>
-            </div>
-          ))}
+              AWS
+            </Label>
+            <div className="h-0.5 w-16 bg-gradient-to-r from-orange-400 to-red-500 rounded-full mx-auto mt-2"></div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
+            {skillsData.aws.map((skill, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/70 backdrop-filter backdrop-blur-sm rounded-lg p-2 flex items-center justify-start flex-row text-center text-white hover:bg-orange-500/20 border border-gray-700 hover:border-orange-400/50 transition-all duration-300 cursor-default overflow-hidden"
+                title={skill}
+              >
+                <span className="h-[25px] w-[25px] flex items-center justify-center">
+                  {getIcon(skill)}
+                </span>
+                <span className="block truncate text-sm ml-[calc(5%)]">
+                  {skill}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

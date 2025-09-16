@@ -33,8 +33,12 @@ export default function AboutSection() {
                 aboutMeAnimation.isVisible ? "animate-fadeRight" : "opacity-0"
               }`}
             >
-              <div className="w-full h-full rounded-full">
-                <img src="./profile.png" alt="profile image" />
+              <div className="w-64 h-64 mx-auto mb-4 overflow-hidden rounded-full border-4 border-gray-600 shadow-lg">
+                <img 
+                  src="./media/linkedin_profile.png" 
+                  alt="profile image"
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
               <div className="inline-flex items-center justify-center space-x-4 w-full">
                 <Button

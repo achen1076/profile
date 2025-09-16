@@ -6,6 +6,7 @@ import AboutSection from "../components/sections/AboutSection.tsx";
 import ProjectSection from "../components/sections/ProjectSection.tsx";
 import ExperienceSection from "../components/sections/ExperienceSection.tsx";
 import SkillSection from "../components/sections/SkillSection.tsx";
+import CertificationSection from "../components/sections/CertificationSection.tsx";
 import ContactSection from "../components/sections/ContactSection.tsx";
 
 export default function IndexPage() {
@@ -29,9 +30,10 @@ export default function IndexPage() {
       <main className={`flex flex-col w-full space-y-16`}>
         <HomeSection />
         <AboutSection />
-        <ProjectSection />
         <ExperienceSection />
         <SkillSection />
+        <CertificationSection />
+        <ProjectSection />
         <ContactSection />
       </main>
       <Footer />

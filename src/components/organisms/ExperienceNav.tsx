@@ -28,30 +28,37 @@ export default function ExperienceNav({
       <ExperienceLink
         setActiveExperience={setActiveExperience}
         experienceId={1}
-        experienceTitle="Enterprise Architecture"
-        company="Comerica Bank"
-        companyLogo="./media/comerica_logo.png"
+        experienceTitle="Full Stack Developer"
+        company="Auto-Owners Insurance"
+        companyLogo="./media/ao_logo.png"
       />
       <ExperienceLink
         setActiveExperience={setActiveExperience}
         experienceId={2}
-        experienceTitle="DevSecOps"
-        company="Comerica Bank"
-        companyLogo="./media/comerica_logo.png"
+        experienceTitle="Full Stack (Contracted)"
+        company="Ally Financial"
+        companyLogo="./media/ally_logo.png"
       />
       <ExperienceLink
         setActiveExperience={setActiveExperience}
         experienceId={3}
-        experienceTitle="Web Architecture and Development"
+        experienceTitle="Web Architecture and Development ULA"
         company="Michigan State University"
         companyLogo="./media/msu_logo.svg"
       />
       <ExperienceLink
         setActiveExperience={setActiveExperience}
         experienceId={4}
-        experienceTitle="Full Stack (Contracted)"
-        company="Ally Financial"
-        companyLogo="./media/ally_logo.png"
+        experienceTitle="DevSecOps Intern"
+        company="Comerica Bank"
+        companyLogo="./media/comerica_logo.png"
+      />
+      <ExperienceLink
+        setActiveExperience={setActiveExperience}
+        experienceId={5}
+        experienceTitle="Enterprise Architecture Intern"
+        company="Comerica Bank"
+        companyLogo="./media/comerica_logo.png"
       />
     </div>
   );

@@ -1,6 +1,5 @@
 import React from "react";
 import Label from "../atoms/label.tsx";
-import { cn } from "../../constants/globalFunctions.tsx";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation.tsx";
 
 interface AboutMeCardProps {

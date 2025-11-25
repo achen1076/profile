@@ -1,6 +1,5 @@
 import React from "react";
 import Label from "../atoms/label.tsx";
-import Button from "../atoms/button.tsx";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation.tsx";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 

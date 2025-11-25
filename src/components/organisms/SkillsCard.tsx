@@ -50,6 +50,8 @@ const getIcon = (skill: string) => {
   switch (skill.toLowerCase()) {
     case "react":
       return <FaReact className="h-[25px] w-[25px]" />;
+    case "next.js":
+      return <FaReact className="h-[25px] w-[25px]" />;
     case "angular":
       return <FaAngular className="h-[25px] w-[25px]" />;
     case "javascript":
@@ -106,6 +108,14 @@ const getIcon = (skill: string) => {
       return <FaAws className="h-[25px] w-[25px]" />;
     case "kms":
       return <FaAws className="h-[25px] w-[25px]" />;
+    case "sagemaker":
+      return <FaAws className="h-[25px] w-[25px]" />;
+    case "ecr":
+      return <FaAws className="h-[25px] w-[25px]" />;
+    case "cloudwatch":
+      return <FaAws className="h-[25px] w-[25px]" />;
+    case "secrets manager":
+      return <FaAws className="h-[25px] w-[25px]" />;
     case "terraform":
       return <SiTerraform className="h-[25px] w-[25px]" />;
     case "jenkins":
@@ -114,6 +124,10 @@ const getIcon = (skill: string) => {
       return <FaDocker className="h-[25px] w-[25px]" />;
     case "langchain":
       return <SiLangchain className="h-[25px] w-[25px]" />;
+    case "nextauth.js":
+      return <FaCode className="h-[25px] w-[25px]" />;
+    case "prisma":
+      return <FaCode className="h-[25px] w-[25px]" />;
     case "ansible":
       return <SiAnsible className="h-[25px] w-[25px]" />;
     case "kubernetes":
@@ -144,6 +158,12 @@ const getIcon = (skill: string) => {
       return <FaChartBar className="h-[25px] w-[25px]" />;
     case "opencv":
       return <SiOpencv className="h-[25px] w-[25px]" />;
+    case "lightgbm":
+      return <FaChartBar className="h-[25px] w-[25px]" />;
+    case "xgboost":
+      return <FaChartBar className="h-[25px] w-[25px]" />;
+    case "optuna":
+      return <FaChartBar className="h-[25px] w-[25px]" />;
     case "git":
       return <FaGit className="h-[25px] w-[25px]" />;
     case "ci/cd":
@@ -161,6 +181,7 @@ export default function SkillsCard() {
   const skillsData = {
     programming: [
       "React",
+      "Next.js",
       "Angular",
       "JavaScript",
       "HTML/CSS",
@@ -177,6 +198,8 @@ export default function SkillsCard() {
     technology: [
       "Django",
       "Flask",
+      "NextAuth.js",
+      "Prisma",
       "Terraform",
       "Jenkins",
       "Docker",
@@ -197,7 +220,11 @@ export default function SkillsCard() {
       "Security Groups",
       "S3",
       "Lambda",
+      "SageMaker",
       "EventBridge",
+      "ECR",
+      "CloudWatch",
+      "Secrets Manager",
       "DynamoDB",
       "RDS",
       "Route 53",
@@ -211,6 +238,9 @@ export default function SkillsCard() {
       "PyTorch",
       "Pandas",
       "NumPy",
+      "LightGBM",
+      "XGBoost",
+      "Optuna",
       "Matplotlib",
       "Seaborn",
       "Scikit-learn",
@@ -225,9 +255,11 @@ export default function SkillsCard() {
       ref={skillAnimation.ref}
     >
       {/* First row with 3 boxes */}
-      <div className={`grid grid-cols-1 ${
-        isTablet ? "grid-cols-1" : "md:grid-cols-3"
-      } gap-6 md:gap-8 mb-6 md:mb-8`}>
+      <div
+        className={`grid grid-cols-1 ${
+          isTablet ? "grid-cols-1" : "md:grid-cols-3"
+        } gap-6 md:gap-8 mb-6 md:mb-8`}
+      >
         {/* Programming Box */}
         <div
           className={`rounded-xl p-5 border border-gray-700 bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${

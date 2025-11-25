@@ -24,7 +24,7 @@ export default function HomeSection() {
           <div className="flex space-x-8 mt-8">
             {/* <Button
               onClick={() => {
-                window.location.href = "#about";
+                window.location.href = "#about.tsx";
               }}
               className="min-w-[200px]"
             >

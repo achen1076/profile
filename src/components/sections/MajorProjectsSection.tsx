@@ -10,22 +10,25 @@ export default function MajorProjectsSection() {
   const marketMinuteProject = {
     title: "MarketMinute",
     description: `Full-stack financial intelligence platform implementing institutional-grade ML 
-    trading strategies with serverless AWS infrastructure. Architected an ensemble model combining 
-    gradient boosting (LightGBM, XGBoost), deep learning (LSTM), and transformer architectures for 
-    multiclass movement prediction. Developed an autonomous Sentinel AI agent using multi-stage 
-    analysis pipeline with anomaly detection, market regime classification, and LangChain-powered 
-    structured narrative generation. Implemented infrastructure-as-code using Terraform for 
-    reproducible deployments with AWS Lambda orchestration and SageMaker inference endpoints.`,
+    trading strategies with serverless AWS infrastructure. Features an AI Chat Agent with Model Context 
+    Protocol (MCP) integration exposing 20+ tools for conversational market intelligence. Architected 
+    an ensemble model combining gradient boosting (LightGBM, XGBoost), deep learning (LSTM), and 
+    transformer architectures for multiclass movement prediction. Developed an autonomous Sentinel AI 
+    agent using multi-stage analysis pipeline with anomaly detection, market regime classification, 
+    and LangChain-powered structured narrative generation. Implemented infrastructure-as-code using 
+    Terraform for reproducible deployments with AWS Lambda orchestration and SageMaker inference endpoints.`,
     githubUrl: "https://github.com/achen1076/MarketMinute",
     liveUrl: "https://market-minute.vercel.app",
     featured: true,
     keyFeatures: [
+      "AI Chat Interface with conversational agent for natural language market queries",
+      "Model Context Protocol (MCP) with 20+ tools for market, user, and analysis data access",
       "Ensemble ML classifier with Optuna optimization and walk-forward validation",
+      "Model Quality Tiers with Sharpe ratio and Profit Factor classification",
       "Multi-stage Sentinel AI agent with signal and volatility detection and LangChain integration",
+      "Lambda Agent serverless orchestrator with automatic type coercion",
       "Serverless ML inference using AWS Lambda + SageMaker endpoints",
-      "Dynamic volatility-adjusted labeling with triple-barrier method",
       "Infrastructure-as-code deployment with Terraform and Docker",
-      "EventBridge-triggered automated daily prediction pipeline",
     ],
     techStack: {
       Frontend: [
@@ -39,6 +42,7 @@ export default function MajorProjectsSection() {
         "Python",
         "LangChain",
         "OpenAI",
+        "Model Context Protocol (MCP)",
         "NextAuth.js",
       ],
       Database: ["PostgreSQL", "Prisma"],
@@ -51,16 +55,34 @@ export default function MajorProjectsSection() {
         "Terraform",
         "Docker",
       ],
-      MachineLearning: [
+      "Machine Learning": [
         "LightGBM",
         "XGBoost",
         "LSTM",
         "Optuna",
         "TensorFlow/PyTorch Hybrid",
-        "Labeling and Feature Engineering",
+        "Bayesian Updating",
+        "Labeling",
       ],
     },
     technicalHighlights: [
+      {
+        title: "AI Chat Agent & MCP Integration",
+        description: `Built a conversational AI interface at /chat enabling natural language market 
+        queries. Implemented Model Context Protocol (MCP) with 20+ specialized tools spanning market 
+        data (quotes, movers, summaries), user management (watchlists, alerts), QuantLab signals 
+        (model quality, top signals), Sentinel reports, news/events, and sentiment analysis. Features 
+        automatic type coercion for tool arguments and a serverless Lambda Agent orchestrator for 
+        efficient request handling.`,
+      },
+      {
+        title: "Model Quality Tiers & Classification",
+        description: `Developed a comprehensive quality classification system for ML models using 
+        quantitative metrics. Models are tiered as Best (🏆) with Sharpe >3 and Profit Factor >2, 
+        Excellent (✓) for good metrics recommended for trading, Good for marginal performance, and 
+        Low Quality (⚠) for underperforming models not recommended. This enables users to quickly 
+        identify reliable signals and make informed trading decisions.`,
+      },
       {
         title: "Quantitative Model Architecture",
         description: `Designed a production-grade multi-model forecasting system integrating LightGBM, 

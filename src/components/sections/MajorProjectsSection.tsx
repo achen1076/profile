@@ -18,7 +18,7 @@ export default function MajorProjectsSection() {
     and LangChain-powered structured narrative generation. Implemented infrastructure-as-code using 
     Terraform for reproducible deployments with AWS Lambda orchestration and SageMaker inference endpoints.`,
     githubUrl: "https://github.com/achen1076/MarketMinute",
-    liveUrl: "https://market-minute.vercel.app",
+    liveUrl: "https://marketminute.io/",
     featured: true,
     keyFeatures: [
       "AI Chat Interface with conversational agent for natural language market queries",

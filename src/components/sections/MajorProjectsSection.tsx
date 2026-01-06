@@ -2,6 +2,10 @@ import React from "react";
 import Label from "../atoms/label.tsx";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation.tsx";
 import MajorProjectCard from "../organisms/MajorProjectCard.tsx";
+import { MockTickerListClient } from "../mock/MockTickerListClient.tsx";
+import { MockMarketMinuteSummary } from "../mock/MockMarketMinuteSummary.tsx";
+import { MockEventsTimeline } from "../mock/MockEventsTimeline.tsx";
+import { MockMovementAlertsBar } from "../mock/MockMovementAlertsBar.tsx";
 
 export default function MajorProjectsSection() {
   const titleAnimation = useScrollAnimation();
@@ -147,12 +151,47 @@ export default function MajorProjectsSection() {
             keyFeatures={marketMinuteProject.keyFeatures}
             techStack={marketMinuteProject.techStack}
             technicalHighlights={marketMinuteProject.technicalHighlights}
-            className={`transform transition-all duration-700 delay-200 ${
-              cardAnimation.isVisible
-                ? "animate-fadeUp"
-                : "opacity-0 translate-y-10"
-            }`}
           />
+
+          {/* Interactive Dashboard Demo */}
+          <div className={`transform transition-all duration-700 delay-300`}>
+            <div className="text-center mb-8">
+              <Label size="3xl" bold={true} className="mb-4">
+                Live Dashboard Demo
+              </Label>
+              <Label size="lg" className="text-gray-300 max-w-2xl mx-auto">
+                Experience the dashboard in action. Click around and explore the
+                features below!
+              </Label>
+            </div>
+
+            <div className="rounded-2xl bg-white border-2 border-[#e2e8f0] shadow-2xl overflow-hidden">
+              <div className="flex flex-col lg:flex-row">
+                <div className="lg:w-[400px] border-r border-[#e2e8f0]">
+                  <MockTickerListClient />
+                </div>
+
+                <div className="flex-1 p-6 space-y-6">
+                  <MockMarketMinuteSummary />
+                  <MockEventsTimeline />
+                  <MockMovementAlertsBar />
+                </div>
+              </div>
+            </div>
+
+            <p className="text-gray-400 text-sm text-center mt-6">
+              * Interactive demo with mock data - Full functionality available
+              and so many other features at{" "}
+              <a
+                href="https://marketminute.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-cyan-300 underline"
+              >
+                marketminute.io
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </React.Fragment>

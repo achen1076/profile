@@ -31,11 +31,11 @@ export default function IndexPage() {
       <main className={`flex flex-col w-full space-y-16`}>
         <HomeSection />
         <AboutSection />
-        <ExperienceSection />
         <MajorProjectsSection />
+        <ExperienceSection />
         <SkillSection />
         <CertificationSection />
-        <ProjectSection />
+        {/* <ProjectSection /> */}
         <ContactSection />
       </main>
       <Footer />

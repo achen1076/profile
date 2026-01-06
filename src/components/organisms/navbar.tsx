@@ -72,11 +72,11 @@ const Navbar: React.FC<NavbarProps> = ({
             <div className="flex space-x-8">
               <NavLink to="#home">Home</NavLink>
               <NavLink to="#about">About</NavLink>
+              <NavLink to="#major-projects">Major Project</NavLink>
               <NavLink to="#experiences">Experiences</NavLink>
-              <NavLink to="#major-projects">Major Projects</NavLink>
               <NavLink to="#skills">Skills</NavLink>
               <NavLink to="#certifications">Certifications</NavLink>
-              <NavLink to="#projects">Projects</NavLink>
+              {/* <NavLink to="#projects">Projects</NavLink> */}
               <NavLink to="#contact">Contact</NavLink>
             </div>
           )}
@@ -86,11 +86,11 @@ const Navbar: React.FC<NavbarProps> = ({
           <div className="flex flex-col space-y-4 mt-2 px-2 animate-fadeIn justify-end">
             <NavLink to="#home">Home</NavLink>
             <NavLink to="#about">About</NavLink>
+            <NavLink to="#major-projects">Major Project</NavLink>
             <NavLink to="#experiences">Experiences</NavLink>
-            <NavLink to="#major-projects">Major Projects</NavLink>
             <NavLink to="#skills">Skills</NavLink>
             <NavLink to="#certifications">Certifications</NavLink>
-            <NavLink to="#projects">Projects</NavLink>
+            {/* <NavLink to="#projects">Projects</NavLink> */}
             <NavLink to="#contact">Contact</NavLink>
           </div>
         )}

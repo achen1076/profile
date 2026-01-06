@@ -203,7 +203,6 @@ export default function SkillsCard() {
       "Terraform",
       "Jenkins",
       "Docker",
-      "LangChain",
       "Ansible",
       "Kubernetes",
       "PostgreSQL",
@@ -231,21 +230,22 @@ export default function SkillsCard() {
       "SDK",
       "KMS",
     ],
-    libraries: [
-      "OpenAI",
+    mlai: [
       "TensorFlow",
-      "Keras",
       "PyTorch",
-      "Pandas",
-      "NumPy",
       "LightGBM",
       "XGBoost",
       "Optuna",
+      "Scikit-learn",
+      "Keras",
+      "Pandas",
+      "NumPy",
+      "OpenCV",
+      "Prophet",
       "Matplotlib",
       "Seaborn",
-      "Scikit-learn",
-      "Prophet",
-      "OpenCV",
+      "LangChain",
+      "OpenAI",
     ],
   };
 
@@ -254,10 +254,10 @@ export default function SkillsCard() {
       className="transform transition-all duration-700 w-full max-w-full px-2 md:px-0"
       ref={skillAnimation.ref}
     >
-      {/* First row with 3 boxes */}
+      {/* First row with 2 boxes */}
       <div
         className={`grid grid-cols-1 ${
-          isTablet ? "grid-cols-1" : "md:grid-cols-3"
+          isTablet ? "grid-cols-1" : "md:grid-cols-2"
         } gap-6 md:gap-8 mb-6 md:mb-8`}
       >
         {/* Programming Box */}
@@ -297,7 +297,7 @@ export default function SkillsCard() {
         {/* Technology Box */}
         <div
           className={`rounded-xl p-5 border border-gray-700 bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${
-            skillAnimation.isVisible ? "animate-fadeUp" : "opacity-0"
+            skillAnimation.isVisible ? "animate-fadeLeft" : "opacity-0"
           }`}
         >
           <div className="relative z-10 mb-4">
@@ -327,48 +327,19 @@ export default function SkillsCard() {
             ))}
           </div>
         </div>
-
-        {/* Libraries Box */}
-        <div
-          className={`rounded-xl p-5 border border-gray-700 bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${
-            skillAnimation.isVisible ? "animate-fadeLeft" : "opacity-0"
-          }`}
-        >
-          <div className="relative z-10 mb-4">
-            <Label
-              size="xl"
-              bold={true}
-              className="text-center cursor-default text-white"
-            >
-              Libraries
-            </Label>
-            <div className="h-0.5 w-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mx-auto mt-2"></div>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
-            {skillsData.libraries.map((skill, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/70 backdrop-filter backdrop-blur-sm rounded-lg p-2 flex items-center justify-start flex-row text-center text-white hover:bg-purple-500/20 border border-gray-700 hover:border-purple-400/50 transition-all duration-300 cursor-default overflow-hidden"
-                title={skill}
-              >
-                <span className="h-[25px] w-[25px] flex items-center justify-center">
-                  {getIcon(skill)}
-                </span>
-                <span className="block truncate text-sm ml-[calc(5%)]">
-                  {skill}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
 
-      {/* Second row with centered AWS box */}
-      <div className={`${isTablet ? "block" : "flex justify-center"}`}>
+      {/* Second row with AWS and ML/AI boxes */}
+      <div
+        className={`grid grid-cols-1 ${
+          isTablet ? "grid-cols-1" : "md:grid-cols-2"
+        } gap-6 md:gap-8`}
+      >
+        {/* AWS Box */}
         <div
           className={`rounded-xl p-5 border border-gray-700 bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${
-            isTablet ? "w-full" : "w-full max-w-sm"
-          } ${skillAnimation.isVisible ? "animate-fadeUp" : "opacity-0"}`}
+            skillAnimation.isVisible ? "animate-fadeRight" : "opacity-0"
+          }`}
         >
           <div className="relative z-10 mb-4">
             <Label
@@ -385,6 +356,40 @@ export default function SkillsCard() {
               <div
                 key={index}
                 className="bg-gray-800/70 backdrop-filter backdrop-blur-sm rounded-lg p-2 flex items-center justify-start flex-row text-center text-white hover:bg-orange-500/20 border border-gray-700 hover:border-orange-400/50 transition-all duration-300 cursor-default overflow-hidden"
+                title={skill}
+              >
+                <span className="h-[25px] w-[25px] flex items-center justify-center">
+                  {getIcon(skill)}
+                </span>
+                <span className="block truncate text-sm ml-[calc(5%)]">
+                  {skill}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ML/AI Box */}
+        <div
+          className={`rounded-xl p-5 border border-gray-700 bg-[#1E1E1E] backdrop-filter backdrop-blur-sm bg-opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${
+            skillAnimation.isVisible ? "animate-fadeLeft" : "opacity-0"
+          }`}
+        >
+          <div className="relative z-10 mb-4">
+            <Label
+              size="xl"
+              bold={true}
+              className="text-center cursor-default text-white"
+            >
+              ML/AI
+            </Label>
+            <div className="h-0.5 w-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto mt-2"></div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
+            {skillsData.mlai.map((skill, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/70 backdrop-filter backdrop-blur-sm rounded-lg p-2 flex items-center justify-start flex-row text-center text-white hover:bg-cyan-500/20 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300 cursor-default overflow-hidden"
                 title={skill}
               >
                 <span className="h-[25px] w-[25px] flex items-center justify-center">

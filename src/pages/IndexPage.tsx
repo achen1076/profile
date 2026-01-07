@@ -26,7 +26,7 @@ export default function IndexPage() {
   }, []);
 
   return (
-    <div className="overflow-x-hidden bg-gradient-to-b from-[#161616] to-[#252525]">
+    <div className="overflow-hidden bg-gradient-to-b from-[#161616] to-[#252525]">
       <Header />
       <main className={`flex flex-col w-full space-y-16`}>
         <HomeSection />

@@ -21,10 +21,10 @@ export default function CertificationSection() {
       id: "aws-developer-associate",
       title: "AWS Certified Developer Associate",
       issuer: "Amazon Web Services",
-      date: "09/05/2025",
+      date: "12/05/2025",
       imageUrl: "./media/aws-developer-associate.png",
       status: "in-progress" as const,
-      progress: 10,
+      progress: 50,
     },
   ];
 

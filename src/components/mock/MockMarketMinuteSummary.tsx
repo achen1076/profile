@@ -99,7 +99,7 @@ export function MockMarketMinuteSummary() {
           {MOCK_SUMMARY.headline}
         </h2>
         <div className="flex flex-col items-end">
-          <span className="text-xs text-[#64748b]">MarketMinute</span>
+          <span className="text-xs text-[#64748b]">Mintalyze</span>
           <span className="text-[10px] text-[#64748b]/70">
             {MOCK_SUMMARY.generatedAt}
           </span>

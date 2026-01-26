@@ -12,7 +12,7 @@ export default function MajorProjectsSection() {
   const cardAnimation = useScrollAnimation();
 
   const marketMinuteProject = {
-    title: "MarketMinute",
+    title: "Mintalyze",
     description: `Full-stack financial intelligence platform implementing institutional-grade ML 
     trading strategies with serverless AWS infrastructure. Features an AI Chat Agent with Model Context 
     Protocol (MCP) integration exposing 20+ tools for conversational market intelligence. Architected 
@@ -22,7 +22,7 @@ export default function MajorProjectsSection() {
     and LangChain-powered structured narrative generation. Implemented infrastructure-as-code using 
     Terraform for reproducible deployments with AWS Lambda orchestration and SageMaker inference endpoints.`,
     githubUrl: "https://github.com/achen1076/MarketMinute",
-    liveUrl: "https://marketminute.io/",
+    liveUrl: "https://mintalyze.com/",
     featured: true,
     keyFeatures: [
       "AI Chat Interface with conversational agent for natural language market queries",
@@ -183,12 +183,12 @@ export default function MajorProjectsSection() {
               * Interactive demo with mock data - Full functionality available
               and so many other features at{" "}
               <a
-                href="https://marketminute.io/"
+                href="https://mintalyze.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyan-400 hover:text-cyan-300 underline"
               >
-                marketminute.io
+                mintalyze.com
               </a>
             </p>
           </div>

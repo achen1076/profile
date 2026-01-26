@@ -35,7 +35,7 @@ export default function ExperienceNav({
       <ExperienceLink
         setActiveExperience={setActiveExperience}
         experienceId={2}
-        experienceTitle="Full Stack (Contracted)"
+        experienceTitle="Software Engineer"
         company="Ally Financial"
         companyLogo="./media/ally_logo.png"
       />
@@ -49,17 +49,17 @@ export default function ExperienceNav({
       <ExperienceLink
         setActiveExperience={setActiveExperience}
         experienceId={4}
-        experienceTitle="DevSecOps Intern"
+        experienceTitle="DevSecOps & EA Intern"
         company="Comerica Bank"
         companyLogo="./media/comerica_logo.png"
       />
       <ExperienceLink
         setActiveExperience={setActiveExperience}
         experienceId={5}
-        experienceTitle="Enterprise Architecture Intern"
-        company="Comerica Bank"
-        companyLogo="./media/comerica_logo.png"
-      />
+        experienceTitle="Founder / Lead Developer"
+        company="Mintalyze"
+        companyLogo="./media/mintalyze_logo.png"
+      />     
     </div>
   );
 }

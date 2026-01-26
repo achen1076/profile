@@ -82,9 +82,9 @@ export default function MajorProjectsSection() {
       {
         title: "Model Quality Tiers & Classification",
         description: `Developed a comprehensive quality classification system for ML models using 
-        quantitative metrics. Models are tiered as Best (🏆) with Sharpe >3 and Profit Factor >2, 
-        Excellent (✓) for good metrics recommended for trading, Good for marginal performance, and 
-        Low Quality (⚠) for underperforming models not recommended. This enables users to quickly 
+        quantitative metrics. Models are tiered as Best with Sharpe >3 and Profit Factor >2, 
+        Excellent for good metrics recommended for trading, Good for marginal performance, and 
+        Low Quality for underperforming models not recommended. This enables users to quickly 
         identify reliable signals and make informed trading decisions.`,
       },
       {
@@ -119,7 +119,7 @@ export default function MajorProjectsSection() {
 
   return (
     <React.Fragment>
-      <div id="major-projects" className="h-[6vh]"></div>
+      <div id="featured-projects" className="h-[6vh]"></div>
       <div
         className="min-h-fit w-full flex items-center justify-center text-center overflow-hidden relative py-16"
         style={{ minHeight: `calc(60 * var(--vh))` }}
@@ -134,7 +134,7 @@ export default function MajorProjectsSection() {
           >
             <div className="relative inline-block mb-4">
               <Label size="4xl" bold={true} className="text-white">
-                Major Project
+                Featured Project
               </Label>
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full"></div>
             </div>

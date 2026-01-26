@@ -6,8 +6,7 @@ export default function Footer() {
     <React.Fragment>
       <div className="w-full h-[10vh] flex items-center justify-center">
         <Label size="xl">
-          &copy; 2025 Andrew Chen. All rights reserved. Made with React and
-          Tailwind CSS.
+          &copy; 2026 Andrew Chen. All rights reserved.
         </Label>
       </div>
     </React.Fragment>

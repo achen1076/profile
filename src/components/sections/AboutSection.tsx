@@ -62,11 +62,11 @@ export default function AboutSection() {
             </div>
 
             <div className="w-full md:w-2/3 text-left space-y-8">
-              <AboutMeCard text="Graduated from Michigan State University with a B.S. in Computer Science and a Minor in Business." />
+              <AboutMeCard text="Graduated from Michigan State University with a B.S. in Computer Science and a Minor in Business in 2025." />
               <AboutMeCard text="Experienced in leading teams to success in software and web development projects." />
-              <AboutMeCard text="Experienced in Full-Stack Web Development: Proficient with React, TypeScript, JavaScript, HTML/CSS, and Python" />
-              <AboutMeCard text="Constantly seek out new tools and frameworks, motivated by curiosity and a desire to build better, faster, and more scalable software." />
-              <AboutMeCard text="I thrive in team environments where ideas are shared freely and feedback is valued. I enjoy mentoring, pair programming, and learning from others." />
+              <AboutMeCard text="Experienced in Web Development: Proficient with React and Angular, TypeScript, JavaScript, HTML/CSS (Tailwind), and AWS." />
+              <AboutMeCard text="Experienced in Machine Learning and Agentic AI: Proficient with Python, C++, TensorFlow, PyTorch, LangChain, and much more" />
+              <AboutMeCard text="Constantly seeking out new projects and experiences, motivated by curiosity and a desire to build better, faster, and more scalable software to help others." />
             </div>
           </div>
         </div>

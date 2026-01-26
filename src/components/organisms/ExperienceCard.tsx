@@ -17,22 +17,24 @@ export default function ExperienceCard({
   const experienceAnimation = useScrollAnimation();
 
   const experienceData = [
+
     {
       title: "Full Stack Developer",
       content: (
         <>
-          • Lead developer for implementation on a critical and multifaceted
-          project, leading coding efforts and ensuring timely, high-quality
-          delivery.
+          • Led the development of multiple critical claims review systems and a
+          rewrite of an outdated legacy system to modernize and enhance the
+          speed and efficiency by over 50%.
           <br />
           <br />
-          • Worked on an Angular front end, .NET (C#) back end, and SQL
-          database, building and maintaining enterprise-level applications.
+          • Maintained and optimized enterprise-level Angular/.NET applications
+          serving over 100+ internal users, handling daily transaction volumes
+          of 500+ claims with 99.9% uptime.
           <br />
           <br />
-          • Designed and implemented dynamic web pages and full-stack
-          integrations, including API endpoints, service calls, and logging
-          mechanisms.
+          • Engineered 15+ new API endpoints and dynamic web interfaces,
+          optimizing SQL queries and API calls to reduce page load latency by up
+          to 40% for data-heavy dashboards.
           <br />
           <br />• Contributed to the company-wide component library by updating
           and enhancing reusable components for consistent UI/UX across
@@ -42,7 +44,7 @@ export default function ExperienceCard({
       company: "Auto-Owners Insurance",
     },
     {
-      title: "Full Stack (Contracted)",
+      title: "Software Engineer",
       content: (
         <>
           • Designed and deployed an Outlook widget to monitor 100+ email
@@ -84,7 +86,7 @@ export default function ExperienceCard({
       company: "Michigan State University",
     },
     {
-      title: "DevSecOps",
+      title: "DevSecOps & EA",
       content: (
         <>
           • Orchestrated and optimized custom and COTS Jenkins pipelines,
@@ -103,26 +105,8 @@ export default function ExperienceCard({
           progress for 50+ applications, driving informed prioritization and
           decision-making.
           <br />
-          <br />• Enhanced code quality and security by resolving 100+ issues
-          using tools like SonarQube and SNYK.
-        </>
-      ),
-      company: "Comerica Bank",
-    },
-    {
-      title: "Enterprise Architecture",
-      content: (
-        <>
-          • Engineered and launched 5+ enterprise applications using Microsoft
-          tools, automating workflows and reducing manual effort by up to 20%.
-          <br />
-          <br />
-          • Designed and integrated 10+ APIs into enterprise applications using
-          Postman and other API services, enhancing system interoperability.
-          <br />
-          <br />
-          • Completed 30+ hours of AWS Cloud training, gaining advanced
-          proficiency in cloud architecture and deployment.
+          <br />• Engineered 5+ enterprise applications using Microsoft tools,
+          automating workflows and reducing manual effort by up to 20%
           <br />
           <br />• Optimized backend database performance for 5+ critical
           applications, achieving 99.9% uptime and ensuring reliability.
@@ -130,8 +114,32 @@ export default function ExperienceCard({
       ),
       company: "Comerica Bank",
     },
+    {
+      title: "Founder / Lead Developer",
+      content: (
+        <>
+          • Architected a serverless stock-analysis platform on AWS (Next.js,
+          Lambda, SageMaker) that scales to handle 10,000+ daily data requests
+          with sub-200ms latency.
+          <br />
+          <br />
+          • Developed an ensemble quant model (LightGBM, XGBoost, LSTM)
+          achieving a 15% improvement in signal accuracy over baseline
+          benchmarks via Optuna tuning and triple-barrier labeling.
+          <br />
+          <br />
+          • Created the 'Sentinel' AI Agent using LangChain and the Model
+          Context Protocol (MCP) to autonomously synthesize complex market data
+          into readable narratives, reducing user research time by ~90%.
+          <br />
+          <br />• Built a real-time NLP pipeline processing 10,000+ news
+          articles daily, achieving 85% correlation with market movement
+          signals.
+        </>
+      ),
+      company: "Mintalyze",
+    },
   ];
-
   useEffect(() => {
     if (displayedExperience !== activeExperience) {
       setTextAnimation("animate-textFadeOut");

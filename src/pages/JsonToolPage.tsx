@@ -97,11 +97,8 @@ export default function JsonToolPage() {
           ← Portfolio
         </Link>
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-jt-accent text-white flex items-center justify-center font-bold text-sm font-mono">
-            {"{}"}
-          </div>
           <span className="text-lg font-bold text-jt-text-primary tracking-tight">
-            JSON<span className="text-jt-accent">Viewer</span>
+            JSON<span className="text-jt-accent">Tool</span>
           </span>
         </div>
         <div className="flex-1" />
@@ -115,9 +112,6 @@ export default function JsonToolPage() {
           </kbd>{" "}
           redo
         </div>
-        <span className="text-[10px] px-2 py-0.5 rounded-md bg-jt-surface-2 text-jt-text-muted font-semibold tracking-wide">
-          v1.0
-        </span>
       </header>
 
       {/* Toolbar */}

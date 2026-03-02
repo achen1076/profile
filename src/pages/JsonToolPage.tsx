@@ -158,8 +158,7 @@ export default function JsonToolPage() {
             </div>
           ) : (
             <div className="flex flex-col items-center justify-center h-full gap-3 text-jt-text-muted text-center p-10">
-              <div className="text-5xl opacity-40">🔍</div>
-              <div className="text-xl font-semibold text-jt-text-secondary">
+=              <div className="text-xl font-semibold text-jt-text-secondary">
                 No JSON loaded
               </div>
               <div className="text-sm max-w-[380px] leading-relaxed">
@@ -168,15 +167,12 @@ export default function JsonToolPage() {
               </div>
               <div className="mt-4 flex flex-col gap-2">
                 <div className="flex items-center gap-2 text-[13px]">
-                  <span className="text-base">📋</span>
                   Paste or type JSON in the left panel
                 </div>
                 <div className="flex items-center gap-2 text-[13px]">
-                  <span className="text-base">📁</span>
                   Upload a .json file
                 </div>
                 <div className="flex items-center gap-2 text-[13px]">
-                  <span className="text-base">✨</span>
                   Click &quot;Load Sample&quot; for a quick demo
                 </div>
               </div>

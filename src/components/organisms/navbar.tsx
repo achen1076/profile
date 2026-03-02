@@ -73,10 +73,10 @@ const Navbar: React.FC<NavbarProps> = ({
               <NavLink to="#home">Home</NavLink>
               <NavLink to="#about">About</NavLink>
               <NavLink to="#featured-projects">Featured Projects</NavLink>
+              <NavLink to="#projects">Projects</NavLink>
               <NavLink to="#experiences">Experiences</NavLink>
               <NavLink to="#skills">Skills</NavLink>
               <NavLink to="#certifications">Certifications</NavLink>
-              {/* <NavLink to="#projects">Projects</NavLink> */}
               <NavLink to="#contact">Contact</NavLink>
             </div>
           )}
@@ -87,10 +87,10 @@ const Navbar: React.FC<NavbarProps> = ({
             <NavLink to="#home">Home</NavLink>
             <NavLink to="#about">About</NavLink>
             <NavLink to="#featured-projects">Featured Projects</NavLink>
+            <NavLink to="#projects">Projects</NavLink>
             <NavLink to="#experiences">Experiences</NavLink>
             <NavLink to="#skills">Skills</NavLink>
             <NavLink to="#certifications">Certifications</NavLink>
-            {/* <NavLink to="#projects">Projects</NavLink> */}
             <NavLink to="#contact">Contact</NavLink>
           </div>
         )}

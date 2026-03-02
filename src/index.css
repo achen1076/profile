@@ -4,6 +4,8 @@
 
 /* Import Rockford font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* JSON Tool fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 /* Note: Rockford is used as a stand-in with Poppins since Rockford might not be available on Google Fonts */
 
 body {

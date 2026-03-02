@@ -6,6 +6,7 @@ import AboutSection from "../components/sections/AboutSection.tsx";
 // import ProjectSection from "../components/sections/ProjectSection.tsx";
 import ExperienceSection from "../components/sections/ExperienceSection.tsx";
 import MajorProjectsSection from "../components/sections/MajorProjectsSection.tsx";
+import ProjectsSection from "../components/sections/ProjectsSection.tsx";
 import SkillSection from "../components/sections/SkillSection.tsx";
 import CertificationSection from "../components/sections/CertificationSection.tsx";
 import ContactSection from "../components/sections/ContactSection.tsx";
@@ -32,6 +33,7 @@ export default function IndexPage() {
         <HomeSection />
         <AboutSection />
         <MajorProjectsSection />
+        <ProjectsSection />
         <ExperienceSection />
         <SkillSection />
         <CertificationSection />
